@@ -1,0 +1,10 @@
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top:20px;
+}
+
+.communities .ui.move.reveal {
+  white-space: normal !important;
+  line-height: normal !important;
+}
