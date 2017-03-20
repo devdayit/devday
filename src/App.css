@@ -1,10 +1,15 @@
 .container {
-  width: 90%;
-  margin: auto;
-  margin-top:20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
 }
 
 .communities .ui.move.reveal {
-  white-space: normal !important;
-  line-height: normal !important;
+    white-space: normal !important;
+    line-height: normal !important;
+}
+
+.ui.horizontal.divider {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
