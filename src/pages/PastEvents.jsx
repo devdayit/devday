@@ -15,8 +15,8 @@ class PastEvents extends Component {
                         {keys.map(key => <List.Item>
                             <Image avatar src={Events[key].logo} />
                             <List.Content>
-                                <Link to={`/past-event/${key}`}>{Events[key].name} - {Events[key].speaker}</Link>
                                 <List.Description>{Events[key].date}</List.Description>
+                                <Link to={`/past-event/${key}`}>{Events[key].name} - {Events[key].speaker}</Link>
                             </List.Content>
                         </List.Item>)}
 
