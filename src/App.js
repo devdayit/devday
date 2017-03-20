@@ -6,7 +6,7 @@ import PageFooter from "./components/PageFooter";
 import Home from "./pages/Home";
 import PastEvents from "./pages/PastEvents";
 import PastEvent from "./pages/PastEvent";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {HashRouter as Router, Route} from "react-router-dom";
 
 class App extends Component {
 
