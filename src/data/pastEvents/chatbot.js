@@ -1,9 +1,9 @@
-var a = {
-        name: "A chatbot from scratch",
-        speaker: "Carlo De Maio",
-        url: "https://www.eventbrite.com/e/7-devday-chatbot-webrtc-tickets-31106271696#",
-        date: "18/02/2017",
-        description: "Vuoi imparare a realizzare un chat bot che funziona sulle più note piattaforme come Facebook Messenger, Telegram, Slack, Kik e altre? Vuoi che sia context aware e capace di tradurre il linguaggio umano in azioni? Allora questo è il talk che fa per te!",
-        youtube: "-KsuFCQgWm8",
-        slides: "2htOC0iJp9jL2n"
-};
+() => ({
+    name: "A chatbot from scratch",
+    speaker: "Carlo De Maio",
+    url: "https://www.eventbrite.com/e/7-devday-chatbot-webrtc-tickets-31106271696#",
+    date: "18/02/2017",
+    description: "Vuoi imparare a realizzare un chat bot che funziona sulle più note piattaforme come Facebook Messenger, Telegram, Slack, Kik e altre? Vuoi che sia context aware e capace di tradurre il linguaggio umano in azioni? Allora questo è il talk che fa per te!",
+    youtube: "-KsuFCQgWm8",
+    slides: "2htOC0iJp9jL2n"
+});
