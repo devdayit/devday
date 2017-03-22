@@ -3,7 +3,7 @@ import {Card, Feed, Reveal, Image, Divider, Grid, Icon, Header} from "semantic-u
 import Communities from "../data/Communities";
 import Events from "../data/Events";
 import Sponsors from "../data/Sponsors";
-import {Link} from 'react-router-dom';
+import {Link} from "react-router-dom";
 
 class Home extends Component {
 
@@ -11,7 +11,6 @@ class Home extends Component {
     {
         super(props);
         this.style = {pastEvents: {textAlign: "right"}};
-
     }
 
     render()

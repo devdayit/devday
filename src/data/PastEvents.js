@@ -1,6 +1,4 @@
 import logoNA from "../images/NA-DEV-DAY_logo.png";
-import logoSA from "../images/SA-DEV-DAY_logo.png";
-import logoAV from "../images/AV-DEV-DAY_logo.png";
 
 const PastEvents = {
     chatbot: {

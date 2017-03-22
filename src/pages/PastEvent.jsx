@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import PastEvents from "../data/PastEvents";
+import GitHubDataService from "../GitHubDataService";
 import {Grid, Header, Segment, Button, Icon} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 
@@ -13,19 +13,26 @@ class PastEvent extends Component {
                 color: "#e0e1e1",
             }
         };
+        this.state = {};
+    }
+
+    componentDidMount()
+    {
+        var gitHubDataService = new GitHubDataService();
+        gitHubDataService
+                .read("pastEvents", this.props.match.params.eventId + ".js")
+                .then(event => this.setState({event}));
     }
 
     render()
     {
-        let eventId = this.props.match.params.eventId;
-        let event = PastEvents[eventId];
-        return (
-                <div>
+        let event = this.state.event;
+        return event ? <div>
                     <Segment.Group horizontal>
                         <Segment>
                             <Link to="/past-events">
                                 <Button animated fluid>
-                                    <Button.Content visible><Icon name='left arrow' /></Button.Content>
+                                    <Button.Content visible><Icon name='left arrow'/></Button.Content>
                                     <Button.Content hidden>
                                         Back
                                     </Button.Content>
@@ -42,14 +49,18 @@ class PastEvent extends Component {
                     <p>{event.description}</p>
                     <Grid columns={2} stackable>
                         {event.slides && <Grid.Column>
-                            <iframe src={`https://www.slideshare.net/slideshow/embed_code/key/${event.slides}`} width={595} height={485} frameBorder={0} marginWidth={0} marginHeight={0} scrolling="no" style={{border: '1px solid #CCC', borderWidth: 1, marginBottom: 5, maxWidth: '100%'}} allowFullScreen/>
+                            <iframe src={`https://www.slideshare.net/slideshow/embed_code/key/${event.slides}`} width={595} height={485} frameBorder={0} marginWidth={0} marginHeight={0} scrolling="no" style={{
+                                border: '1px solid #CCC',
+                                borderWidth: 1,
+                                marginBottom: 5,
+                                maxWidth: '100%'
+                            }} allowFullScreen/>
                         </Grid.Column>}
                         {event.youtube && <Grid.Column>
                             <iframe width={560} height={315} src={`https://www.youtube.com/embed/${event.youtube}`} frameBorder={0} allowFullScreen/>
                         </Grid.Column>}
                     </Grid>
-                </div>
-        );
+                </div> : <div />
     }
 }
 

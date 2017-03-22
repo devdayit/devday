@@ -1,22 +1,43 @@
 import React, {Component} from "react";
 import {Divider, List, Image} from "semantic-ui-react";
-import Events from "../data/PastEvents";
 import {Link} from 'react-router-dom';
+import GitHubDataService from "../GitHubDataService";
+
 
 class PastEvents extends Component {
 
+    constructor(props)
+    {
+        super(props);
+        this.state = {pastEvents: []};
+    }
+
+    componentDidMount()
+    {
+        var gitHubDataService = new GitHubDataService();
+        gitHubDataService.list("pastEvents").then(list =>
+        {
+            list.forEach(item => gitHubDataService.read("pastEvents", item).then(content =>
+            {
+                var pastEvents = Object.assign([], this.state.pastEvents);
+                content.key = item.substring(0, item.length - 3);
+                pastEvents.push(content);
+                this.setState({pastEvents});
+            }));
+        });
+    }
+
     render()
     {
-        let keys = Object.keys(Events);
         return (
                 <div>
                     <Divider horizontal>Eventi passati</Divider>
                     <List size="huge">
-                        {keys.map(key => <List.Item>
-                            <Image avatar src={Events[key].logo} />
+                        {this.state.pastEvents.map(event => <List.Item key={event.key}>
+                            {/*<Image avatar src={Events[key].logo}/>*/}
                             <List.Content>
-                                <List.Description>{Events[key].date}</List.Description>
-                                <Link to={`/past-event/${key}`}>{Events[key].name} - {Events[key].speaker}</Link>
+                                <List.Description>{event.date}</List.Description>
+                                <Link to={`/past-event/${event.key}`}>{event.name} - {event.speaker}</Link>
                             </List.Content>
                         </List.Item>)}
 
