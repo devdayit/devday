@@ -9,6 +9,7 @@
     "react": "^15.4.2",
     "react-count-down": "^1.1.0",
     "react-dom": "^15.4.2",
+    "react-github-fork-ribbon": "^0.4.5",
     "react-moment": "^0.2.2",
     "react-router-dom": "^4.0.0",
     "semantic-ui-react": "^0.67.1",
