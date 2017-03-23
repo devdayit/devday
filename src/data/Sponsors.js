@@ -3,7 +3,7 @@ import XTeam from '../images/sponsor/xteam.png';
 import Healthware from '../images/sponsor/healthware.jpeg';
 import Puntolingue from '../images/sponsor/puntolingue.jpg';
 import Analist from '../images/sponsor/analist.jpg';
-import Ducato from '../images/sponsor/ducato.jpg';
+import Ducato from '../images/sponsor/ducato.png';
 
 var Sponsors = [
     {
