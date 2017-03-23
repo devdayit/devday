@@ -53,79 +53,83 @@ class Home extends Component {
                         </Card>)}
                     </Card.Group>
                     <Divider horizontal/>
-                    <Card.Group itemsPerRow={2} stackable>
-                        <Card>
-                            <Card.Content>
-                                <Card.Header>
-                                    <Grid columns={2}>
-                                        <Grid.Column key={1}>
-                                            Prossimi Eventi
-                                        </Grid.Column>
-                                        <Grid.Column key={2} style={this.style.pastEvents}>
-                                            <Link to="/past-events">(eventi passati)</Link>
-                                        </Grid.Column>
-                                    </Grid>
-                                </Card.Header>
-                            </Card.Content>
-                            <Card.Content>
-                                <Feed>
-                                    {this.state.upcomingEvents.map(event => <Feed.Event
-                                            href={event.url}
-                                            image={event.logo}
-                                            key={event.name}
-                                            date={event.date}
-                                            summary={event.name}
-                                            extraText={event.location}/>)}
-                                </Feed>
-                            </Card.Content>
-                        </Card>
-                        <Card>
-                            <Card.Content>
-                                <Card.Header>
-                                    Social
-                                </Card.Header>
-                            </Card.Content>
-                            <Card.Content>
-                                <Card.Group>
-                                    <Card fluid href="https://www.facebook.com/DevDay.it">
-                                        <Card.Content>
-                                            <Card.Header>
-                                                <Icon name="facebook"/>Facebook
-                                            </Card.Header>
-                                        </Card.Content>
-                                    </Card>
-                                    <Card fluid href="https://twitter.com/DevDayit">
-                                        <Card.Content>
-                                            <Card.Header>
-                                                <Icon name="twitter"/>Twitter
-                                            </Card.Header>
-                                        </Card.Content>
-                                    </Card>
-                                    <Card fluid href="https://www.youtube.com/channel/UCUmykbn_rG5dExSncCgW9Nw">
-                                        <Card.Content>
-                                            <Card.Header>
-                                                <Icon name="youtube"/>YouTube
-                                            </Card.Header>
-                                        </Card.Content>
-                                    </Card>
-                                    <Card fluid href="https://slack.devday.it">
-                                        <Card.Content>
-                                            <Card.Header>
-                                                <Icon name="slack"/>Slack
-                                            </Card.Header>
-                                        </Card.Content>
-                                    </Card>
-                                    <Card fluid href="https://www.slideshare.net/DevDay_it">
-                                        <Card.Content>
-                                            <Card.Header>
-                                                <Icon name="slideshare"/>SlideShare
-                                            </Card.Header>
-                                        </Card.Content>
-                                    </Card>
-                                </Card.Group>
-                            </Card.Content>
-                        </Card>
-                    </Card.Group>
+                    <Grid columns={2} stackable>
+                        <Grid.Column key={1}>
+                            <Card fluid>
+                                <Card.Content>
+                                    <Card.Header>
+                                        <Grid columns={2}>
+                                            <Grid.Column key={1}>
+                                                Prossimi Eventi
+                                            </Grid.Column>
+                                            <Grid.Column key={2} style={this.style.pastEvents}>
+                                                <Link to="/past-events">(eventi passati)</Link>
+                                            </Grid.Column>
+                                        </Grid>
+                                    </Card.Header>
+                                </Card.Content>
+                                <Card.Content>
+                                    <Feed>
+                                        {this.state.upcomingEvents.map(event => <Feed.Event
+                                                href={event.url}
+                                                image={event.logo}
+                                                key={event.name}
+                                                date={event.date}
+                                                summary={event.name}
+                                                extraText={event.location}/>)}
+                                    </Feed>
+                                </Card.Content>
+                            </Card>
+                        </Grid.Column>
+                        <Grid.Column key={2}>
+                            <Card fluid>
+                                <Card.Content>
+                                    <Card.Header>
+                                        Social
+                                    </Card.Header>
+                                </Card.Content>
+                                <Card.Content>
+                                    <Card.Group>
+                                        <Card fluid href="https://www.facebook.com/DevDay.it">
+                                            <Card.Content>
+                                                <Card.Header>
+                                                    <Icon name="facebook"/>Facebook
+                                                </Card.Header>
+                                            </Card.Content>
+                                        </Card>
+                                        <Card fluid href="https://twitter.com/DevDayit">
+                                            <Card.Content>
+                                                <Card.Header>
+                                                    <Icon name="twitter"/>Twitter
+                                                </Card.Header>
+                                            </Card.Content>
+                                        </Card>
+                                        <Card fluid href="https://www.youtube.com/channel/UCUmykbn_rG5dExSncCgW9Nw">
+                                            <Card.Content>
+                                                <Card.Header>
+                                                    <Icon name="youtube"/>YouTube
+                                                </Card.Header>
+                                            </Card.Content>
+                                        </Card>
+                                        <Card fluid href="https://slack.devday.it">
+                                            <Card.Content>
+                                                <Card.Header>
+                                                    <Icon name="slack"/>Slack
+                                                </Card.Header>
+                                            </Card.Content>
+                                        </Card>
+                                        <Card fluid href="https://www.slideshare.net/DevDay_it">
+                                            <Card.Content>
+                                                <Card.Header>
+                                                    <Icon name="slideshare"/>SlideShare
+                                                </Card.Header>
+                                            </Card.Content>
+                                        </Card>
+                                    </Card.Group>
+                                </Card.Content>
+                            </Card>
+                        </Grid.Column>
+                    </Grid>
                     <Divider horizontal>Sponsor</Divider>
                     <Card.Group itemsPerRow={5} className="sponsors" stackable>
                         {Sponsors.map(sponsor => <Card href={sponsor.url} key={sponsor.name}>

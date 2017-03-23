@@ -8,7 +8,7 @@ class PageHeader extends Component {
     render()
     {
         return (
-                <Grid columns={2}>
+                <Grid columns={2} stackable>
                     <Grid.Column key={1}>
                         <Link to="/">
                             <Image src={logo}/>
