@@ -15,7 +15,7 @@ class App extends Component {
         return (
                 <Router>
                     <div className="container">
-                        <GitHubForkRibbon position="right"
+                        <GitHubForkRibbon position="left-bottom"
                                           color="green"
                                           href="https://github.com/devdayit/devday"
                                           target="_blank" >

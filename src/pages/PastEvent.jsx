@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import GitHubDataService from "../GitHubDataService";
-import {Grid, Header, Segment, Button, Icon} from "semantic-ui-react";
+import {Grid, Header, Button, Icon} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 import PageHeader from "../components/PageHeader";
+import Moment from "react-moment";
 
 class PastEvent extends Component {
 
@@ -30,8 +31,8 @@ class PastEvent extends Component {
         let event = this.state.event;
         return event ? <div>
                     <PageHeader/>
-                    <Segment.Group horizontal>
-                        <Segment>
+                    <Grid verticalAlign="middle" stackable fluid celled columns={3}>
+                        <Grid.Column width={3}>
                             <Link to="/past-events">
                                 <Button animated fluid>
                                     <Button.Content visible><Icon name='left arrow'/></Button.Content>
@@ -40,16 +41,16 @@ class PastEvent extends Component {
                                     </Button.Content>
                                 </Button>
                             </Link>
-                        </Segment>
-                        <Segment>
+                        </Grid.Column>
+                        <Grid.Column width={10}>
                             <Header size="huge">{event.name} - {event.speaker}</Header>
-                        </Segment>
-                        <Segment>
-                            <Header size="small" style={this.style.subtitle}>{event.date} <br /> {event.location}</Header>
-                        </Segment>
-                    </Segment.Group>
+                        </Grid.Column>
+                        <Grid.Column width={3}>
+                            <Header size="small" style={this.style.subtitle}><Moment format="DD/MM/YYYY">{event.date}</Moment> <br /> {event.location}</Header>
+                        </Grid.Column>
+                    </Grid>
                     <p>{event.description}</p>
-                    <Grid columns={2} stackable>
+                    <Grid columns={2} stackable fluid>
                         {event.slides && <Grid.Column>
                             <iframe src={`https://www.slideshare.net/slideshow/embed_code/key/${event.slides}`} width={595} height={485} frameBorder={0} marginWidth={0} marginHeight={0} scrolling="no" style={{
                                 border: '1px solid #CCC',
