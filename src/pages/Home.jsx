@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Card, Feed, Reveal, Image, Divider, Grid, Icon, Header, Step} from "semantic-ui-react";
+import {Card, Feed, Reveal, Image, Divider, Grid, Icon, Header, Step, Dimmer, Loader} from "semantic-ui-react";
 import Communities from "../data/Communities";
 import Sponsors from "../data/Sponsors";
 import {Link} from "react-router-dom";
@@ -11,7 +11,7 @@ class Home extends Component {
     {
         super(props);
         this.style = {pastEvents: {textAlign: "right"}};
-        this.state = {upcomingEvents: []};
+        this.state = {upcomingEvents: [], loadingEvents: true};
     }
 
     componentDidMount()
@@ -19,12 +19,13 @@ class Home extends Component {
         var gitHubDataService = new GitHubDataService();
         gitHubDataService.list("upcomingEvents").then(list =>
         {
+            this.setState({loadingEvents: true});
             list.forEach(item => gitHubDataService.read("upcomingEvents", item).then(content =>
             {
                 var upcomingEvents = Object.assign([], this.state.upcomingEvents);
                 content.key = item.substring(0, item.length - 5);
                 upcomingEvents.push(content);
-                this.setState({upcomingEvents});
+                this.setState({upcomingEvents, loadingEvents: false});
             }));
         });
     }
@@ -68,6 +69,9 @@ class Home extends Component {
                                     </Card.Header>
                                 </Card.Content>
                                 <Card.Content>
+                                    <Dimmer inverted active={this.state.loadingEvents}>
+                                        <Loader inverted>Qualche secondo e sono pronto...</Loader>
+                                    </Dimmer>
                                     <Feed>
                                         {this.state.upcomingEvents.map(event => <Feed.Event
                                                 href={event.url}
@@ -141,7 +145,8 @@ class Home extends Component {
                         </Step>
                         <Step style={{flex: "initial"}}>
                             <Step.Content>
-                                La comunità si muove intorno agli incontri e alla condivisione della conoscenza. Per questo abbiamo sempre bisogno di persone che vogliono parlare di sviluppo software alla nostra comunità. Se sei interessato scrivi a <a href="mailto:devdays@devday.it">devdays@devday.it</a>. Grazie!
+                                La comunità si muove intorno agli incontri e alla condivisione della conoscenza. Per questo abbiamo sempre bisogno di persone che vogliono parlare di sviluppo software alla nostra comunità. Se sei interessato scrivi a
+                                <a href="mailto:devdays@devday.it">devdays@devday.it</a>. Grazie!
                             </Step.Content>
                         </Step>
                     </Step.Group>
@@ -153,7 +158,8 @@ class Home extends Component {
                         </Step>
                         <Step style={{flex: "initial"}}>
                             <Step.Content>
-                                In un mondo sempre più virtuale abbiamo deciso di incontrarci in "analogico". Per questo abbiamo bisogno di spazi dove incontrarci o aziende che possano sponsorizzare le spese di locazione. Vuoi dare una mano? Scrivi a <a href="mailto:devdays@devday.it">devdays@devday.it</a>.
+                                In un mondo sempre più virtuale abbiamo deciso di incontrarci in "analogico". Per questo abbiamo bisogno di spazi dove incontrarci o aziende che possano sponsorizzare le spese di locazione. Vuoi dare una mano? Scrivi a
+                                <a href="mailto:devdays@devday.it">devdays@devday.it</a>.
                             </Step.Content>
                         </Step>
                     </Step.Group>

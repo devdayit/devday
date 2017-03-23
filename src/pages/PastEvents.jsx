@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Divider, List, Image, Segment, Dimmer, Loader} from "semantic-ui-react";
+import {Divider, List, Image, Dimmer, Loader} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 import GitHubDataService from "../GitHubDataService";
 
@@ -16,6 +16,7 @@ class PastEvents extends Component {
         var gitHubDataService = new GitHubDataService();
         gitHubDataService.list("pastEvents").then(list =>
         {
+            this.setState({loading: true});
             list.forEach(item => gitHubDataService.read("pastEvents", item).then(content =>
             {
                 var pastEvents = Object.assign([], this.state.pastEvents);
@@ -29,11 +30,11 @@ class PastEvents extends Component {
     render()
     {
         return (
-                <Segment>
+                <div>
                     <Dimmer inverted active={this.state.loading}>
                         <Loader inverted>Aspetta un attimo...</Loader>
                     </Dimmer>
-                    <Divider horizontal>Eventi passati</Divider>
+                    {!this.state.loading && <Divider horizontal>Eventi passati</Divider>}
                     <List size="huge">
                         {this.state.pastEvents.map(event => <List.Item key={event.key}>
                             {event.logo && <Image avatar src={event.logo}/>}
@@ -45,7 +46,7 @@ class PastEvents extends Component {
 
 
                     </List>
-                </Segment>
+                </div>
         );
     }
 }
