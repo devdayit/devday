@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import {Card, Feed, Reveal, Image, Divider, Grid, Icon, Header} from "semantic-ui-react";
+import {Card, Feed, Reveal, Image, Divider, Grid, Icon, Header, Step} from "semantic-ui-react";
 import Communities from "../data/Communities";
-import Events from "../data/Events";
 import Sponsors from "../data/Sponsors";
 import {Link} from "react-router-dom";
 import GitHubDataService from "../GitHubDataService";
@@ -130,7 +129,34 @@ class Home extends Component {
                             </Card>
                         </Grid.Column>
                     </Grid>
+                    <Divider horizontal/>
+                    <Step.Group fluid>
+                        <Step active>
+                            <Icon name='chat'/>
+                            <Step.Content>
+                                <Step.Title>
+                                    Ti piace parlare? Conosci molto bene qualche tecnologia o framework? <br />Proponi un tuo intervento!
+                                </Step.Title>
+                            </Step.Content>
+                        </Step>
+                        <Step style={{flex: "initial"}}>
+                            <Step.Content>
+                                La comunità si muove intorno agli incontri e alla condivisione della conoscenza. Per questo abbiamo sempre bisogno di persone che vogliono parlare di sviluppo software alla nostra comunità. Se sei interessato scrivi a <a href="mailto:devdays@devday.it">devdays@devday.it</a>. Grazie!
+                            </Step.Content>
+                        </Step>
+                    </Step.Group>
                     <Divider horizontal>Sponsor</Divider>
+                    <Step.Group fluid>
+                        <Step active>
+                            <Icon name='hand peace'/>
+                            <Step.Content title='Vuoi essere un nostro sponsor?'/>
+                        </Step>
+                        <Step style={{flex: "initial"}}>
+                            <Step.Content>
+                                In un mondo sempre più virtuale abbiamo deciso di incontrarci in "analogico". Per questo abbiamo bisogno di spazi dove incontrarci o aziende che possano sponsorizzare le spese di locazione. Vuoi dare una mano? Scrivi a <a href="mailto:devdays@devday.it">devdays@devday.it</a>.
+                            </Step.Content>
+                        </Step>
+                    </Step.Group>
                     <Card.Group itemsPerRow={5} className="sponsors" stackable>
                         {Sponsors.map(sponsor => <Card href={sponsor.url} key={sponsor.name}>
                             <Image
