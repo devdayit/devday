@@ -1,9 +1,9 @@
 {
   "logo": "logoNA",
-  "name": "Bootstrap 4 is coming!",
-  "speaker": "Carmine Alfano",
-  "url": "https://www.eventbrite.com/e/9-devday-bootstrap-4-is-coming-tickets-32399217933#",
-  "date": "08/03/2017",
-  "description": "Diventato ormai uno standard nello sviluppo web, Bootstrap è lo strumento più importante da conoscere per uno sviluppatore web. In questo talk vedremo, con un approccio molto pratico, le novità della versione 4 analizzando la nuova gestione del grid system basato sul modulo flexbox, entreremo poi nel dettaglio della stilizzazione grafica avanzata attraverso SASS. Scopriremo infine come migrare dalla versione di Bootstrap 3 alla 4.",
-  "youtube": "IsJ9FLiUv3s"
+  "name": "Introduzione a ReactJS e ES6",
+  "speaker": "Davide Cerbo",
+  "url": "https://www.eventbrite.com/e/1-devday-napoli-react-react-native-tickets-19433876247#",
+  "date": "16/11/2017",
+  "description": "ReactJS è una nuova tecnologia introdotta da Facebook che cambia gli schemi dello sviluppo frontend. Durante questo intervento analizzeremo la struttura del framework e come le novità introdotte da ES6 possono migliorare la nostra esperienza di sviluppo.",
+  "slides": "pdjgGIFu3D4e90"
 }
