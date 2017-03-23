@@ -49,7 +49,7 @@ var Sponsors = [
         location:"Avellino"
     },
     {
-        name: "iNewshell",
+        name: "Newshell",
         url: "http://www.newshell.it/",
         description:"Newshell - Hosting, Domini, Server Dedicati, VPS, Dedicate Server, Payment bitcoin, Bitcoin, Assistenza sistemistica",
         logo: Newshell,
