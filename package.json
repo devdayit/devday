@@ -6,6 +6,7 @@
   "dependencies": {
     "api-github": "^1.1.0",
     "github-api": "^3.0.0",
+    "moment-timezone": "^0.5.11",
     "react": "^15.4.2",
     "react-count-down": "^1.1.0",
     "react-dom": "^15.4.2",
