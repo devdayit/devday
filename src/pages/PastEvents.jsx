@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {Divider, List, Image, Dimmer, Loader} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 import GitHubDataService from "../GitHubDataService";
+import _ from "underscore";
+import Moment from "react-moment";
 
 class PastEvents extends Component {
 
@@ -22,6 +24,7 @@ class PastEvents extends Component {
                 var pastEvents = Object.assign([], this.state.pastEvents);
                 content.key = item.substring(0, item.length - 5);
                 pastEvents.push(content);
+                pastEvents = _.sortBy(pastEvents, 'date').reverse();
                 this.setState({pastEvents, loading: false});
             }));
         });
@@ -39,7 +42,9 @@ class PastEvents extends Component {
                         {this.state.pastEvents.map(event => <List.Item key={event.key}>
                             {event.logo && <Image avatar src={event.logo}/>}
                             <List.Content>
-                                <List.Description>{event.date}</List.Description>
+                                <List.Description>
+                                    <Moment format="DD/MM/YYYY">{event.date}</Moment>
+                                </List.Description>
                                 <Link to={`/past-event/${event.key}`}>{event.name} - {event.speaker}</Link>
                             </List.Content>
                         </List.Item>)}
