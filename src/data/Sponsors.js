@@ -3,6 +3,7 @@ import XTeam from '../images/sponsor/xteam.png';
 import Healthware from '../images/sponsor/healthware.jpeg';
 import Puntolingue from '../images/sponsor/puntolingue.jpg';
 import Analist from '../images/sponsor/analist.jpg';
+import Ducato from '../images/sponsor/ducato.jpg';
 
 var Sponsors = [
     {
@@ -38,6 +39,13 @@ var Sponsors = [
         url: "https://www.analistgroup.com",
         description:"Innovative Software Solutions for Land Surveying, Mapping and Constructions.",
         logo: Analist,
+        location:"Avellino"
+    },
+    {
+        name: "Ducato di Chianche",
+        url: "http://www.ducatodichianche.com/",
+        description:"Ducato di Chianche - Wine EXPERIENCE",
+        logo: Ducato,
         location:"Avellino"
     },
 ];
