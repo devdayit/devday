@@ -4,7 +4,7 @@ import Healthware from '../images/sponsor/healthware.jpeg';
 import Puntolingue from '../images/sponsor/puntolingue.jpg';
 import Analist from '../images/sponsor/analist.jpg';
 import Ducato from '../images/sponsor/ducato.png';
-
+import Newshell from '../images/sponsor/newshell.png'
 var Sponsors = [
     {
         name: "Entaksi Solutions",
@@ -48,6 +48,15 @@ var Sponsors = [
         logo: Ducato,
         location:"Avellino"
     },
+    {
+        name: "iNewshell",
+        url: "http://www.newshell.it/",
+        description:"Newshell - Hosting, Domini, Server Dedicati, VPS, Dedicate Server, Payment bitcoin, Bitcoin, Assistenza sistemistica",
+        logo: Newshell,
+        location:"Salerno"
+    }
+
+
 ];
 
 export default Sponsors;
