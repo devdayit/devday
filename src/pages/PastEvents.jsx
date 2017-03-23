@@ -3,7 +3,6 @@ import {Divider, List, Image} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 import GitHubDataService from "../GitHubDataService";
 
-
 class PastEvents extends Component {
 
     constructor(props)
@@ -20,7 +19,7 @@ class PastEvents extends Component {
             list.forEach(item => gitHubDataService.read("pastEvents", item).then(content =>
             {
                 var pastEvents = Object.assign([], this.state.pastEvents);
-                content.key = item.substring(0, item.length - 3);
+                content.key = item.substring(0, item.length - 5);
                 pastEvents.push(content);
                 this.setState({pastEvents});
             }));
@@ -34,7 +33,7 @@ class PastEvents extends Component {
                     <Divider horizontal>Eventi passati</Divider>
                     <List size="huge">
                         {this.state.pastEvents.map(event => <List.Item key={event.key}>
-                            {/*<Image avatar src={Events[key].logo}/>*/}
+                            {event.logo && <Image avatar src={event.logo}/>}
                             <List.Content>
                                 <List.Description>{event.date}</List.Description>
                                 <Link to={`/past-event/${event.key}`}>{event.name} - {event.speaker}</Link>

@@ -1,4 +1,8 @@
 import GitHub from 'github-api';
+import logoNAImage from './images/NA-DEV-DAY_logo.png';
+import logoSAImage from './images/SA-DEV-DAY_logo.png';
+import logoBNImage from './images/BN-DEV-DAY_logo.png';
+import logoAVImage from './images/AV-DEV-DAY_logo.png';
 
 export default class GitHubDataService {
 
@@ -30,22 +34,19 @@ export default class GitHubDataService {
                     reject(err);
                 } else
                 {
-                    resolve(eval(result)());
+                    //this var resolves the logos inside the evalued json
+                    var images = {
+                        logoNA: logoNAImage,
+                        logoSA: logoSAImage,
+                        logoAV: logoAVImage,
+                        logoBN: logoBNImage
+                    };
+                    if (result.logo && typeof result.logo === "string")
+                    {
+                        result.logo = images[result.logo];
+                    }
+                    resolve(result);
                 }
-            });
-        });
-    }
-
-    readAll(folder)
-    {
-        return new Promise((resolve, reject) =>
-        {
-            this.list(folder).then(result =>
-            {
-                Promise
-                        .all(result.map(file => this.read(folder, file)))
-                        .then(allFiles => resolve(allFiles.map(content => eval(content))))
-                        .catch(reject);
             });
         });
     }

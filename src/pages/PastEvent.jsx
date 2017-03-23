@@ -20,7 +20,7 @@ class PastEvent extends Component {
     {
         var gitHubDataService = new GitHubDataService();
         gitHubDataService
-                .read("pastEvents", this.props.match.params.eventId + ".js")
+                .read("pastEvents", this.props.match.params.eventId + ".json")
                 .then(event => this.setState({event}));
     }
 

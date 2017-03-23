@@ -1,0 +1,9 @@
+{
+  "logo": "logoNA",
+  "name": "Developing Microservices with Openshift Container Platform",
+  "speaker": "Ugo Landini",
+  "url": "https://www.eventbrite.com/e/8-devday-developing-microservices-with-openshift-container-platform-tickets-31852766482#",
+  "date": "08/02/2017",
+  "description": "Abstract: Openshift is an Enterprise version of Kubernetes and Containers are commonly seen as \"the new Application Servers\": in this talk we'll look at how twelve factor moves @ the infrastructure level with the help of OCP. We’ll look at Java, Vertx, Spring Boot & Golang code and how we can manage the whole thing form a single pane of glass.",
+  "youtube": "DR_PLIgagl8",
+}

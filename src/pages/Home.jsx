@@ -4,6 +4,7 @@ import Communities from "../data/Communities";
 import Events from "../data/Events";
 import Sponsors from "../data/Sponsors";
 import {Link} from "react-router-dom";
+import GitHubDataService from "../GitHubDataService";
 
 class Home extends Component {
 
@@ -11,6 +12,22 @@ class Home extends Component {
     {
         super(props);
         this.style = {pastEvents: {textAlign: "right"}};
+        this.state = {upcomingEvents: []};
+    }
+
+    componentDidMount()
+    {
+        var gitHubDataService = new GitHubDataService();
+        gitHubDataService.list("upcomingEvents").then(list =>
+        {
+            list.forEach(item => gitHubDataService.read("upcomingEvents", item).then(content =>
+            {
+                var upcomingEvents = Object.assign([], this.state.upcomingEvents);
+                content.key = item.substring(0, item.length - 5);
+                upcomingEvents.push(content);
+                this.setState({upcomingEvents});
+            }));
+        });
     }
 
     render()
@@ -52,7 +69,7 @@ class Home extends Component {
                             </Card.Content>
                             <Card.Content>
                                 <Feed>
-                                    {Events.map(event => <Feed.Event
+                                    {this.state.upcomingEvents.map(event => <Feed.Event
                                             href={event.url}
                                             image={event.logo}
                                             key={event.name}
