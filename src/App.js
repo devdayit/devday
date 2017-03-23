@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import "./App.css";
 import {Container} from "semantic-ui-react";
-import PageHeader from "./components/PageHeader";
 import PageFooter from "./components/PageFooter";
 import Home from "./pages/Home";
 import PastEvents from "./pages/PastEvents";
@@ -15,7 +14,6 @@ class App extends Component {
         return (
                 <Router>
                     <div className="container">
-                        <PageHeader/>
                         <Container fluid>
                             <Route exact path="/" component={Home}/>
                             <Route path="/past-events" component={PastEvents}/>

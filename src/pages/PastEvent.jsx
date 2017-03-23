@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import GitHubDataService from "../GitHubDataService";
 import {Grid, Header, Segment, Button, Icon} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
+import PageHeader from "../components/PageHeader";
 
 class PastEvent extends Component {
 
@@ -28,6 +29,7 @@ class PastEvent extends Component {
     {
         let event = this.state.event;
         return event ? <div>
+                    <PageHeader/>
                     <Segment.Group horizontal>
                         <Segment>
                             <Link to="/past-events">

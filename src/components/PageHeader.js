@@ -16,6 +16,7 @@ class PageHeader extends Component {
                     </Grid.Column>
                     <Grid.Column key={2}>
                         <h2>Il punto di incontro degli sviluppatori in Campania</h2>
+                        {this.props.children}
                     </Grid.Column>
                 </Grid>
         );

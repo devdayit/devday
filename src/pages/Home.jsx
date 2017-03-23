@@ -4,6 +4,9 @@ import Communities from "../data/Communities";
 import Sponsors from "../data/Sponsors";
 import {Link} from "react-router-dom";
 import GitHubDataService from "../GitHubDataService";
+import _ from "underscore";
+import Moment from "react-moment";
+import PageHeader from "../components/PageHeader";
 
 class Home extends Component {
 
@@ -25,6 +28,7 @@ class Home extends Component {
                 var upcomingEvents = Object.assign([], this.state.upcomingEvents);
                 content.key = item.substring(0, item.length - 5);
                 upcomingEvents.push(content);
+                upcomingEvents = _.sortBy(upcomingEvents, 'date').reverse()
                 this.setState({upcomingEvents, loadingEvents: false});
             }));
         });
@@ -32,8 +36,37 @@ class Home extends Component {
 
     render()
     {
+        const nextEvent = this.state.upcomingEvents.length > 0 && this.state.upcomingEvents[0];
         return (
                 <div>
+                    <PageHeader>
+                        <Dimmer inverted active={this.state.loadingEvents}>
+                            <Loader inverted>Il prossimo evento sarà il...</Loader>
+                        </Dimmer>
+                        {nextEvent && <Step.Group fluid>
+                            <Step active>
+                                <Icon name='calendar'/>
+                                <Step.Content>
+                                    <Step.Title>
+                                        Prossimo evento
+                                    </Step.Title>
+                                    <Step.Description>
+                                        <Moment fromNow locale="IT">{nextEvent.date}</Moment>
+                                    </Step.Description>
+                                </Step.Content>
+                            </Step>
+                            <Step style={{flex: "initial"}} href={nextEvent.url}>
+                                <Step.Content>
+                                    <Step.Title>
+                                        {nextEvent.name}
+                                    </Step.Title>
+                                    <Step.Description>
+                                        {nextEvent.community}
+                                    </Step.Description>
+                                </Step.Content>
+                            </Step>
+                        </Step.Group>}
+                    </PageHeader>
                     <Divider horizontal>Le nostre comunità</Divider>
                     <Card.Group itemsPerRow={Communities.length} className="communities" stackable>
                         {Communities.map(community => <Card color={community.color} key={community.name}>
@@ -77,7 +110,7 @@ class Home extends Component {
                                                 href={event.url}
                                                 image={event.logo}
                                                 key={event.name}
-                                                date={event.date}
+                                                date={<Moment locale="IT" format=" Do MMMM YYYY @ HH:mm">{event.date}</Moment>}
                                                 summary={event.name}
                                                 extraText={event.location}/>)}
                                     </Feed>
@@ -145,7 +178,7 @@ class Home extends Component {
                         </Step>
                         <Step style={{flex: "initial"}}>
                             <Step.Content>
-                                La comunità si muove intorno agli incontri e alla condivisione della conoscenza. Per questo abbiamo sempre bisogno di persone che vogliono parlare di sviluppo software alla nostra comunità. Se sei interessato scrivi a
+                                La comunità si muove intorno agli incontri e alla condivisione della conoscenza. Per questo abbiamo sempre bisogno di persone che vogliono parlare di sviluppo software alla nostra comunità. Se sei interessato scrivi a&nbsp;
                                 <a href="mailto:devdays@devday.it">devdays@devday.it</a>. Grazie!
                             </Step.Content>
                         </Step>
@@ -158,7 +191,7 @@ class Home extends Component {
                         </Step>
                         <Step style={{flex: "initial"}}>
                             <Step.Content>
-                                In un mondo sempre più virtuale abbiamo deciso di incontrarci in "analogico". Per questo abbiamo bisogno di spazi dove incontrarci o aziende che possano sponsorizzare le spese di locazione. Vuoi dare una mano? Scrivi a
+                                In un mondo sempre più virtuale abbiamo deciso di incontrarci in "analogico". Per questo abbiamo bisogno di spazi dove incontrarci o aziende che possano sponsorizzare le spese di locazione. Vuoi dare una mano? Scrivi a&nbsp;
                                 <a href="mailto:devdays@devday.it">devdays@devday.it</a>.
                             </Step.Content>
                         </Step>

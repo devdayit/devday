@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import GitHubDataService from "../GitHubDataService";
 import _ from "underscore";
 import Moment from "react-moment";
+import PageHeader from "../components/PageHeader";
 
 class PastEvents extends Component {
 
@@ -34,6 +35,7 @@ class PastEvents extends Component {
     {
         return (
                 <div>
+                    <PageHeader/>
                     <Dimmer inverted active={this.state.loading}>
                         <Loader inverted>Aspetta un attimo...</Loader>
                     </Dimmer>
