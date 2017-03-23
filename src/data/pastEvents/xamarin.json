@@ -1,0 +1,8 @@
+{
+  "logo": "logoSA",
+  "name": "Xamarin & Mobile Continuous Integration",
+  "speaker": "Antonio Liccardi",
+  "url": "https://www.meetup.com/it-IT/devday-salerno/events/237925325/",
+  "date": "2017-03-18",
+  "description": "La prossima sessione del nostro DevDay è dedicata al mondo Mobile (non stiamo parlando di armadi ma di SMARTPHONEs): questi dispositivi sono ormai entrati a far parte del nostro quotidiano, tanto che le aziende che volevano lanciare un nuovo prodotto sul mercato hanno dovuto iniziare a farlo \"mobile-first\". Il problema è che esistono almeno 3 piattaforme (qualcuno dice 2 piattaforme e una nicchia...) con uguali potenzialità (ma con clienti molto diversi...) e realizzare app per tutte e tre le piattaforme richiede almeno tre developer bravi. <br />Siamo quindi condannati a imparare 3 linguaggi, usare 3 IDE diversi e abbracciare 3 filosofie?<br />NO!<br /><br />Xamarin (che nacque fuori da Microsoft e poi ne è stata acquisita) è una soluzione che permette di realizzare app per tutti i dispositivi scrivendo il codice una sola volta. Questo approccio funziona? O c'è la solita magagna sotto? Scopriamolo insieme al nostro speaker: Antonio Liccardi! "
+}

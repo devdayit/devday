@@ -1,0 +1,9 @@
+{
+  "logo": "logoSA",
+  "name": "Docker",
+  "speaker": "Antonio di Motta",
+  "url": "https://www.meetup.com/it-IT/devday-salerno/events/236868832/",
+  "date": "2017-01-28",
+  "description": "Col nascere di queste piattaforme \"cloud\" nasce anche l'esigenza di avere un ambiente di sviluppo che fosse il più possibile \"simile\" a quello deployato on line: da qui l'idea di non deployare più l'applicazione nuda e cruda, bensì deployare una specie di immagine virtuale - un file che contiene una ISO di un linux \"naked\" e il vostro programma, che quando si avvia parte automaticamente. In questo modo siamo sicuri (al 99% :D) che ciò che funziona sul vostro computer funzionerà anche su cloud. Una delle soluzioni che stanno giocando la partita della virtualizzazione è Docker (ma non è l'unica).",
+  "youtube":"xtjpL2t9GtM"
+}

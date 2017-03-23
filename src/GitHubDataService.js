@@ -3,6 +3,7 @@ import logoNAImage from './images/NA-DEV-DAY_logo.png';
 import logoSAImage from './images/SA-DEV-DAY_logo.png';
 import logoBNImage from './images/BN-DEV-DAY_logo.png';
 import logoAVImage from './images/AV-DEV-DAY_logo.png';
+import logoMAGImage from './images/MAKEAGAME.png';
 
 export default class GitHubDataService {
 
@@ -39,7 +40,8 @@ export default class GitHubDataService {
                         logoNA: logoNAImage,
                         logoSA: logoSAImage,
                         logoAV: logoAVImage,
-                        logoBN: logoBNImage
+                        logoBN: logoBNImage,
+                        logoMAG: logoMAGImage
                     };
                     if (result.logo && typeof result.logo === "string")
                     {

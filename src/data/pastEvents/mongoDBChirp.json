@@ -1,0 +1,8 @@
+{
+  "logo": "logoSA",
+  "name": "MongoDB & Chirp",
+  "speaker": "Antonio Di Motta",
+  "url": "https://www.meetup.com/it-IT/devday-salerno/events/231505157/",
+  "date": "2016-06-18",
+  "description": "MongoDB (da \"humongous\", gigantesco) è il database NoSQL leader che potenzia le attività commerciali conferendogli più agilità e scalabilità. Le organizzazioni di tutte le dimensioni usano MongoDB per creare nuovi tipi di applicazioni, migliorare l’esperienza dei clienti, accelerare le tempistiche di mercato e ridurre i costi. MongoDB è un database open-source di uso generale. Antonio ha scelto MongoDB come database della sua applicazione; nel suo talk ci spiegherà le differenze con un database relazionale e perchè lo ha preferito alle altre alternative."
+}

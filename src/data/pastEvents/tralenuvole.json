@@ -1,0 +1,9 @@
+{
+  "logo": "logoSA",
+  "name": "Sviluppare \"tra le nuvole\" con Docker & AWS",
+  "speaker": "Mauro Ghiani",
+  "url": "https://www.meetup.com/it-IT/devday-salerno/events/236868832/",
+  "date": "2017-01-28",
+  "description": "Comprare un server o uno spazio hosting è ancora pienamente legittimo, ma negli ultimi anni abbiamo visto sempre più aziende spostare tutti i loro applicativi di produzione verso architetture \"as-a-service\", tradotto in Italiano paghi solo la CPU, la RAM, lo spazio sull'hard disk o il traffico di rete che generi. Quest'approccio ha liberato le aziende dall'acquisto di costose apparecchiature, poi da manutenere e sostituire, e di concentrarsi solo sullo sviluppo del codice. L'infrastruttura viene quindi gestita \"facilmente\" tramite interfacce grafiche che ti consentono di aggiungere di tutto, ad esempio proxy, reti vpn, dischi, router.... sembra di giocare a The Sims - Network Admin edition! I provider che offrono questi sistemi \"SaaS\" sono tanti, tra cui Amazon AWS che è stato il primo e che adesso è il più diffuso, ma poi ci sono anche i vari IBM Bluemix, Microsoft Azure, Heroku, Google Cloud Engine, anche TIM, e altri ...",
+  "youtube": "ioDOTcuhGvQ"
+}

@@ -1,0 +1,9 @@
+{
+  "logo": "logoSA",
+  "name": "Xamarin & Mobile Continuous Integration",
+  "speaker": "Antonio Liccardi",
+  "url": "https://www.meetup.com/it-IT/devday-salerno/events/237925325/",
+  "date": "2016-10-29",
+  "description": "Bootstrap 4 is coming!:<br />Diventato ormai uno standard nello sviluppo web, tanto di essere adottato anche nelle specifiche della pubblica amministrazione, Bootstrap è lo strumento più importante da conoscere per uno sviluppatore web. In questa sessione vedremo, con un approccio molto pratico, le novità della versione 4, entrando nel dettaglio della stilizzazione grafica con SASS e analizzando la nuova gestione del grid system. <br /><br />Write your SASS and sleep peacefully!<br />Usare SASS è come usare i CSS con i superpoteri, possiede tutti gli strumenti che al momento i fogli di stile non hanno: variabili, funzioni, possibilità di annidamento, supporto ai file parziali, possibilità di eseguire calcoli. Grazie a SASS potrai velocizzare lo sviluppo e manutenere al meglio piccoli e grandi progetti. In questa sessione, servendomi visual studio code, illustrerò come usare SASS in modo pratico e suggerirò alcuni trick e consigli utili! Conosci SASS e migliora i tuoi CSS!",
+  "youtube": "rJK2BEbXTrA"
+}

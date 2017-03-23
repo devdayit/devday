@@ -1,0 +1,9 @@
+{
+  "logo": "logoSA",
+  "name": "ReactNative & ES6",
+  "speaker": "Patrick Arminio",
+  "url": "https://www.meetup.com/it-IT/devday-salerno/events/229937245/",
+  "date": "2016-04-30",
+  "description": "Il servizio Facebook che noi tutti utilizziamo è una web app di grande complessità da un punto di vista dell'ingegneria del software. FB per dominare tale complessità ha sviluppato nel tempo degli strumenti ad uso interno e ne ha poi donato uno, React.js, particolarmente innovativo, alla comunità open source dei developers. L'innovazione è incentrata nella logica del trattamento dinamico della struttura della pagina web (Virtual DOM). Lo stesso approccio può anche essere utilizzato per sviluppare app native per i dispositivi android, Apple iOS e Windows (React Native). Prerequisiti per la comprensione degli argomenti trattati: Javascript, html, DOM.",
+  "youtube": "CVIhxTQqB1E"
+}
