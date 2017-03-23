@@ -3,7 +3,7 @@
   "name": "Bootstrap 4 is coming!",
   "speaker": "Carmine Alfano",
   "url": "https://www.eventbrite.com/e/9-devday-bootstrap-4-is-coming-tickets-32399217933#",
-  "date": "08/03/2017",
+  "date": "2017-03-08",
   "description": "Diventato ormai uno standard nello sviluppo web, Bootstrap è lo strumento più importante da conoscere per uno sviluppatore web. In questo talk vedremo, con un approccio molto pratico, le novità della versione 4 analizzando la nuova gestione del grid system basato sul modulo flexbox, entreremo poi nel dettaglio della stilizzazione grafica avanzata attraverso SASS. Scopriremo infine come migrare dalla versione di Bootstrap 3 alla 4.",
   "youtube": "IsJ9FLiUv3s"
 }

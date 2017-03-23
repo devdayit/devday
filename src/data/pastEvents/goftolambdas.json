@@ -3,7 +3,7 @@
   "name": "From GoF to lambdas",
   "speaker": "Mario Fusco",
   "url": "https://www.eventbrite.com/e/3-devday-napoli-from-gof-to-lambdas-tickets-22333114948#",
-  "date": "15/03/2016",
+  "date": "2016-03-15",
   "description": "Il libro di design patterns noto come Gang of Four è stata una sorta di Bibbia per tutti gli sviluppattori della mia generazione. Il suo principale pregio è stato quello di darci un vocabolario comune: quando un programmatore dice \"qui ho usato uno strategy pattern\" tutti i colleghi sanno di cosa sta parlando. Il problema è che la maggior parte dei pattern elencati nel libro sono una finzione o meglio un workaround per sopperire ad un'astrazione mancante: le higher order functions. Con l'introduzione delle lambda expressions in Java 8 è finalmente possibile anche per gli sviluppatori Java liberarsi di questa non più necessaria sovrastruttura. Lo scopo del talk è mostrare, con una serie di esempi sviluppati in una live coding session, come reimplementare i più comuni e utilizzati pattern del GoF in modo più semplice e conciso con le lambda expression di Java 8.",
   "youtube": "F6m9-cquNrY"
 }

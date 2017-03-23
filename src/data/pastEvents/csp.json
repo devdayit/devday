@@ -3,7 +3,7 @@
   "name": "Gestione dei flussi asincroni con CSP",
   "speaker": "Vincenzo Chianese",
   "url": "https://www.eventbrite.com/e/6-devday-gestione-dei-flussi-asincroni-con-csp-tickets-29739171663#",
-  "date": "22/12/2016",
+  "date": "2016-12-22",
   "description": "Il software deve affrontare flussi di controllo complicati, soprattutto quando utilizziamo linguaggi per fortemente asincroni come Javascript, piattaforme come NodeJS o tecniche di reactive programming. Diverse sono le tecniche per gestirli: callbacks, promises e streams. La soluzione scelta ha un impatto profondo sul codice. Le cose possono però essere semplificate con una singola astrazione visto che il problema sottostante è lo stesso: la coordinazione della concorrenza. Con il pattern CSP (Communicating sequential processes) e il concetto di Channels scopriremo come risolvere questo problema.",
   "youtube": "hcJM0Ut0bgc"
 }

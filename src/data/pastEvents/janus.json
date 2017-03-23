@@ -3,7 +3,7 @@
   "name": "Janus: un server WebRTC open source e \"general purpose\"",
   "speaker": "Lorenzo Miniero",
   "url": "https://www.eventbrite.com/e/7-devday-chatbot-webrtc-tickets-31106271696#",
-  "date": "08/03/2017",
+  "date": "2017-03-08",
   "description": "Janus è un server WebRTC open source e modulare, concepito per essere a tutti gli effetti uno strumento \"general purpose\" per la realizzazione di complessi scenari multimediali. In quanto tale, si presta a supportare applicazioni di vario tipo, a partire da scenari più tradizionali quali conferencing, e-learning e streaming multimediale, per arrivare ad applicazioni più innovative che coinvolgano dispositivi eterogenei. La presentazione partirà da una breve panoramica su WebRTC, per coprire poi l'architettura di Janus e le possibili topologie di utilizzo, fino a presentare alcuni esempi reali di utilizzo e casi d'uso di successo.",
   "youtube": "gArqopeNQY0",
   "slides": "zAseZvvpDukFbg"

@@ -3,7 +3,7 @@
   "name": "OrientDB - Perché le tue applicazioni meritano un DB Multi-Model",
   "speaker": "Luigi Dell'Aquila",
   "url": "https://www.eventbrite.com/e/4-devday-orientdb-perche-le-tue-applicazioni-meritano-un-db-multi-model-tickets-28392100537#",
-  "date": "28/10/2016",
+  "date": "2016-10-28",
   "description": "Il NoSQL ormai e' una tecnologia consolidata, i nuovi modelli dati (document, graph, key/value) hanno mostrato tutti i loro vantaggi, ma anche le loro debolezze.Ci hanno detto \"usa il giusto data model per il tuo use case\", peccato che il tuo use case quasi mai si può inquadrare in un singolo data model, relazionale, document o graph che sia.In questo talk parleremo di come il NoSQL si stia evolvendo verso il Multi-Model e di come OrientDB sta guidando questa evoluzione, che ha al centro il graph database.Vedremo insieme degli esempi pratici di applicazione del paradigma multi-model e di come questo può aiutarti a risolvere problemi reali di business.",
   "youtube": "m1HfSzQSfMI",
   "slides": "zDLF9gMBl4gIfL"
