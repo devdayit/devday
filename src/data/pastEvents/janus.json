@@ -1,9 +1,10 @@
 {
   "logo": "logoNA",
-  "name": "Bootstrap 4 is coming!",
-  "speaker": "Carmine Alfano",
-  "url": "https://www.eventbrite.com/e/9-devday-bootstrap-4-is-coming-tickets-32399217933#",
+  "name": "Janus: un server WebRTC open source e \"general purpose\"",
+  "speaker": "Lorenzo Miniero",
+  "url": "https://www.eventbrite.com/e/7-devday-chatbot-webrtc-tickets-31106271696#",
   "date": "08/03/2017",
-  "description": "Diventato ormai uno standard nello sviluppo web, Bootstrap è lo strumento più importante da conoscere per uno sviluppatore web. In questo talk vedremo, con un approccio molto pratico, le novità della versione 4 analizzando la nuova gestione del grid system basato sul modulo flexbox, entreremo poi nel dettaglio della stilizzazione grafica avanzata attraverso SASS. Scopriremo infine come migrare dalla versione di Bootstrap 3 alla 4.",
-  "youtube": "IsJ9FLiUv3s"
+  "description": "Janus è un server WebRTC open source e modulare, concepito per essere a tutti gli effetti uno strumento \"general purpose\" per la realizzazione di complessi scenari multimediali. In quanto tale, si presta a supportare applicazioni di vario tipo, a partire da scenari più tradizionali quali conferencing, e-learning e streaming multimediale, per arrivare ad applicazioni più innovative che coinvolgano dispositivi eterogenei. La presentazione partirà da una breve panoramica su WebRTC, per coprire poi l'architettura di Janus e le possibili topologie di utilizzo, fino a presentare alcuni esempi reali di utilizzo e casi d'uso di successo.",
+  "youtube": "gArqopeNQY0",
+  "slides": "zAseZvvpDukFbg",
 }

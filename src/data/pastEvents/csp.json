@@ -1,9 +1,9 @@
 {
   "logo": "logoNA",
-  "name": "Bootstrap 4 is coming!",
-  "speaker": "Carmine Alfano",
-  "url": "https://www.eventbrite.com/e/9-devday-bootstrap-4-is-coming-tickets-32399217933#",
-  "date": "08/03/2017",
-  "description": "Diventato ormai uno standard nello sviluppo web, Bootstrap è lo strumento più importante da conoscere per uno sviluppatore web. In questo talk vedremo, con un approccio molto pratico, le novità della versione 4 analizzando la nuova gestione del grid system basato sul modulo flexbox, entreremo poi nel dettaglio della stilizzazione grafica avanzata attraverso SASS. Scopriremo infine come migrare dalla versione di Bootstrap 3 alla 4.",
-  "youtube": "IsJ9FLiUv3s"
+  "name": "Gestione dei flussi asincroni con CSP",
+  "speaker": "Vincenzo Chianese",
+  "url": "https://www.eventbrite.com/e/6-devday-gestione-dei-flussi-asincroni-con-csp-tickets-29739171663#",
+  "date": "22/12/2016",
+  "description": "Il software deve affrontare flussi di controllo complicati, soprattutto quando utilizziamo linguaggi per fortemente asincroni come Javascript, piattaforme come NodeJS o tecniche di reactive programming. Diverse sono le tecniche per gestirli: callbacks, promises e streams. La soluzione scelta ha un impatto profondo sul codice. Le cose possono però essere semplificate con una singola astrazione visto che il problema sottostante è lo stesso: la coordinazione della concorrenza. Con il pattern CSP (Communicating sequential processes) e il concetto di Channels scopriremo come risolvere questo problema.",
+  "youtube": "hcJM0Ut0bgc"
 }
