@@ -35,7 +35,7 @@ var Sponsors = [
     },
     {
         name: "Analist Group",
-        url: "https://www.x-team.com",
+        url: "https://www.analistgroup.com",
         description:"Innovative Software Solutions for Land Surveying, Mapping and Constructions.",
         logo: Analist,
         location:"Avellino"
