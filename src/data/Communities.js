@@ -39,10 +39,10 @@ var Communities = [
     },
     {
         name: "Make a game - Campania",
-        color: "orange",
+        color: "grey",
         logo: logoMAG,
         description: "Visita la pagina della comunità di sviluppo videogame in Campania!",
-        facebook: "https://www.facebook.com/groups/devdaybn/",
+        facebook: "https://www.facebook.com/groups/1105695212878350/",
         meetup: "https://www.meetup.com/it-IT/MakeGameCampania/"
     }
 ];
