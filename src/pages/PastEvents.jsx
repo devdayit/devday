@@ -45,7 +45,7 @@ class PastEvents extends Component {
                             {event.logo && <Image avatar src={event.logo}/>}
                             <List.Content>
                                 <List.Description>
-                                    <Moment format="DD/MM/YYYY">{event.date}</Moment>
+                                    <Moment format="DD/MM/YYYY">{event.date}</Moment> {event.youtube && <Icon size="small" name='video'/>} {event.slides && <Icon size="small" name='slideshare'/>}
                                 </List.Description>
                                 <Link to={`/past-event/${event.key}`}>{event.name} - {event.speaker}</Link>
                             </List.Content>
