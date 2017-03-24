@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import {Divider, Icon, Step} from "semantic-ui-react";
+import {Divider, Image, Step} from "semantic-ui-react";
 import GitHubDataService from "../GitHubDataService";
 import {Link} from 'react-router-dom';
 import Moment from "react-moment";
+import delorean from '../images/delorean.png';
 
 class RandomVideo extends Component {
 
@@ -54,7 +55,7 @@ class RandomVideo extends Component {
                         <Divider horizontal>Time machine</Divider>
                         <Step.Group fluid>
                             <Step active style={{width: "50%"}}>
-                                <Icon name='video'/>
+                                <Image src={delorean} />
                                 <Step.Content>
                                     <Step.Title>
                                         <Link to={`/past-event/${key.substring(0, key.length - 5)}`}>{event.name} - {event.speaker}</Link>
