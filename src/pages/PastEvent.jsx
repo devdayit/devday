@@ -31,7 +31,7 @@ class PastEvent extends Component {
         let event = this.state.event;
         return event ? <div>
                     <PageHeader/>
-                    <Grid verticalAlign="middle" stackable fluid celled columns={3}>
+                    <Grid verticalAlign="middle" stackable celled columns={3}>
                         <Grid.Column width={3}>
                             <Link to="/past-events">
                                 <Button animated fluid>
@@ -50,7 +50,7 @@ class PastEvent extends Component {
                         </Grid.Column>
                     </Grid>
                     <p>{event.description}</p>
-                    <Grid columns={2} stackable fluid>
+                    <Grid columns={2} stackable>
                         {event.slides && <Grid.Column>
                             <iframe src={`https://www.slideshare.net/slideshow/embed_code/key/${event.slides}`} width={595} height={485} frameBorder={0} marginWidth={0} marginHeight={0} scrolling="no" style={{
                                 border: '1px solid #CCC',

@@ -7,6 +7,7 @@ import GitHubDataService from "../GitHubDataService";
 import _ from "underscore";
 import Moment from "react-moment";
 import PageHeader from "../components/PageHeader";
+import RandomVideo from "../components/RandomVideo";
 
 class Home extends Component {
 
@@ -183,6 +184,8 @@ class Home extends Component {
                             </Step.Content>
                         </Step>
                     </Step.Group>
+                    <Divider horizontal/>
+                    <RandomVideo />
                     <Divider horizontal>Sponsor</Divider>
                     <Step.Group fluid>
                         <Step active>
