@@ -1,4 +1,4 @@
-#DevDay WebSite [![Build Status](https://travis-ci.org/devdayit/devday.svg?branch=master)](https://travis-ci.org/devdayit/devday)
+# DevDay WebSite [![Build Status](https://travis-ci.org/devdayit/devday.svg?branch=master)](https://travis-ci.org/devdayit/devday)
 
 
 
