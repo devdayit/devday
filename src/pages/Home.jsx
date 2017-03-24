@@ -126,7 +126,7 @@ class Home extends Component {
                                     </Card.Header>
                                 </Card.Content>
                                 <Card.Content>
-                                    <Card.Group>
+                                    <Card.Group itemsPerRow="2">
                                         <Card fluid href="https://www.facebook.com/DevDay.it">
                                             <Card.Content>
                                                 <Card.Header>
@@ -184,7 +184,6 @@ class Home extends Component {
                             </Step.Content>
                         </Step>
                     </Step.Group>
-                    <Divider horizontal/>
                     <RandomVideo />
                     <Divider horizontal>Sponsor</Divider>
                     <Step.Group fluid>

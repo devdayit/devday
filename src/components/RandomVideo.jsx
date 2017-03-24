@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Divider, Icon, Step} from "semantic-ui-react";
 import GitHubDataService from "../GitHubDataService";
 import {Link} from 'react-router-dom';
+import Moment from "react-moment";
 
 class RandomVideo extends Component {
 
@@ -49,26 +50,29 @@ class RandomVideo extends Component {
         var {event, key} = this.state;
         return (
                 <div>
-                    {event && event.youtube && <Step.Group fluid>
-                        <Step active style={{width: "50%"}}>
-                            <Icon name='video'/>
-                            <Step.Content>
-                                <Step.Title>
-                                    La macchina del tempo? Esiste!
-                                </Step.Title>
-                                <Step.Description>
-                                    <Link to={`/past-event/${key.substring(0, key.length - 5)}`}>Ti sei perso "{event.name}" con {event.speaker}? Non temere abbiamo registrato tutto!</Link>
-                                </Step.Description>
-                            </Step.Content>
-                        </Step>
-                        <Step style={{width: "50%"}}>
-                            <Step.Content style={{width: "100%"}}>
-                                <div className="videowrapper">
-                                    <iframe width={560} height={315} src={`https://www.youtube.com/embed/${event.youtube}?autoplay=1`} frameBorder={0} allowFullScreen/>
-                                </div>
-                            </Step.Content>
-                        </Step>
-                    </Step.Group>}
+                    {event && event.youtube && <div>
+                        <Divider horizontal>Time machine</Divider>
+                        <Step.Group fluid>
+                            <Step active style={{width: "50%"}}>
+                                <Icon name='video'/>
+                                <Step.Content>
+                                    <Step.Title>
+                                        <Link to={`/past-event/${key.substring(0, key.length - 5)}`}>{event.name} - {event.speaker}</Link>
+                                    </Step.Title>
+                                    <Step.Description>
+                                        Ritorna a <Moment fromNow locale="IT">{event.date}</Moment> e rivivi questo talk!
+                                    </Step.Description>
+                                </Step.Content>
+                            </Step>
+                            <Step style={{width: "50%"}}>
+                                <Step.Content style={{width: "100%"}}>
+                                    <div className="videowrapper">
+                                        <iframe width={560} height={315} src={`https://www.youtube.com/embed/${event.youtube}?autoplay=1`} frameBorder={0} allowFullScreen/>
+                                    </div>
+                                </Step.Content>
+                            </Step>
+                        </Step.Group>
+                    </div>}
                 </div>
         );
     }

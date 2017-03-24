@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Divider, List, Image, Dimmer, Loader} from "semantic-ui-react";
+import {Divider, List, Image, Dimmer, Loader, Icon} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 import GitHubDataService from "../GitHubDataService";
 import _ from "underscore";
