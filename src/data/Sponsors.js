@@ -4,7 +4,7 @@ import Healthware from '../images/sponsor/healthware.jpeg';
 import Puntolingue from '../images/sponsor/puntolingue.jpg';
 import Analist from '../images/sponsor/analist.jpg';
 import Ducato from '../images/sponsor/ducato.png';
-import Newshell from '../images/sponsor/newshell.png'
+import Newshell from '../images/sponsor/newshell.jpg'
 var Sponsors = [
     {
         name: "Entaksi Solutions",
