@@ -1,13 +1,11 @@
 import React, {Component} from "react";
 import {Card, Feed, Reveal, Image, Divider, Grid, Icon, Header, Step, Dimmer, Loader} from "semantic-ui-react";
 import Communities from "../data/Communities";
-import Sponsors from "../data/Sponsors";
 import {Link} from "react-router-dom";
 import GitHubDataService from "../GitHubDataService";
 import _ from "underscore";
 import Moment from "react-moment";
 import PageHeader from "../components/PageHeader";
-import RandomVideo from "../components/RandomVideo";
 
 class Home extends Component {
 
@@ -184,8 +182,6 @@ class Home extends Component {
                             </Step.Content>
                         </Step>
                     </Step.Group>
-                    <RandomVideo />
-                    <Divider horizontal>Sponsor</Divider>
                     <Step.Group fluid>
                         <Step active>
                             <Icon name='hand peace'/>
@@ -198,17 +194,6 @@ class Home extends Component {
                             </Step.Content>
                         </Step>
                     </Step.Group>
-                    <Card.Group itemsPerRow={5} className="sponsors" stackable>
-                        {Sponsors.map(sponsor => <Card href={sponsor.url} key={sponsor.name}>
-                            <Image
-                                    src={sponsor.logo}
-                                    centered/>
-                            <Card.Content>
-                                <Card.Header>{sponsor.name}</Card.Header>
-                                <Card.Description>{sponsor.description}</Card.Description>
-                            </Card.Content>
-                        </Card>)}
-                    </Card.Group>
                 </div>
         );
     }

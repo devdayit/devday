@@ -7,18 +7,21 @@ import PastEvents from "./pages/PastEvents";
 import PastEvent from "./pages/PastEvent";
 import {HashRouter as Router, Route} from "react-router-dom";
 import GitHubForkRibbon from 'react-github-fork-ribbon';
+import RandomVideo from "./components/RandomVideo";
+import Sponsors from "./components/Sponsors";
 
 class App extends Component {
 
     render()
     {
         return (
-                <Router>
+                <Router onChange={() => console.log("onChange")}>
                     <div className="container">
+                        <ScrollToTopOnMount />
                         <GitHubForkRibbon position="left-bottom"
                                           color="green"
                                           href="https://github.com/devdayit/devday"
-                                          target="_blank" >
+                                          target="_blank">
                             Fork me on GitHub!
                         </GitHubForkRibbon>
                         <Container fluid>
@@ -26,7 +29,9 @@ class App extends Component {
                             <Route path="/past-events" component={PastEvents}/>
                             <Route path="/past-event/:eventId" component={PastEvent}/>
                         </Container>
-                        <PageFooter/>
+                        <RandomVideo />
+                        <Sponsors />
+                        <PageFooter />
                     </div>
                 </Router>
         );
@@ -34,3 +39,15 @@ class App extends Component {
 }
 
 export default App;
+
+class ScrollToTopOnMount extends Component {
+    componentDidUpdate(prevProps)
+    {
+        window.scrollTo(0, 0);
+    }
+
+    render()
+    {
+        return null
+    }
+}

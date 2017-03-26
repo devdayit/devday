@@ -4,13 +4,14 @@ import GitHubDataService from "../GitHubDataService";
 import {Link} from 'react-router-dom';
 import Moment from "react-moment";
 import delorean from '../images/delorean.png';
+import ScrollMonitor from "scrollmonitor";
 
 class RandomVideo extends Component {
 
     constructor(props)
     {
         super(props);
-        this.state = {};
+        this.state = {videoVisible: false};
     }
 
     componentDidMount()
@@ -22,6 +23,12 @@ class RandomVideo extends Component {
                 {
                     this.random(list, this.randomIndex(list), gitHubDataService);
                 });
+        if (this.stepElement)
+        {
+            var elementWatcher = ScrollMonitor.create(this.stepElement);
+            elementWatcher.enterViewport(() => this.setState({videoVisible: true}));
+            elementWatcher.exitViewport(() => this.setState({videoVisible: false}));
+        }
     }
 
     randomIndex(list)
@@ -50,12 +57,12 @@ class RandomVideo extends Component {
     {
         var {event, key} = this.state;
         return (
-                <div>
+                <div ref={(element) => (this.stepElement = element) }>
                     {event && event.youtube && <div>
                         <Divider horizontal>Time machine</Divider>
                         <Step.Group fluid>
                             <Step active style={{width: "50%"}}>
-                                <Image src={delorean} />
+                                <Image src={delorean}/>
                                 <Step.Content>
                                     <Step.Title>
                                         <Link to={`/past-event/${key.substring(0, key.length - 5)}`}>{event.name} - {event.speaker}</Link>
@@ -65,15 +72,17 @@ class RandomVideo extends Component {
                                     </Step.Description>
                                 </Step.Content>
                             </Step>
-                            <Step style={{width: "50%"}}>
-                                <Step.Content style={{width: "100%"}}>
-                                    <div className="videowrapper">
-                                        <iframe width={560} height={315} src={`https://www.youtube.com/embed/${event.youtube}?autoplay=1`} frameBorder={0} allowFullScreen/>
-                                    </div>
-                                </Step.Content>
-                            </Step>
+                            <div className={this.state.videoVisible ? "normal-video" : "static-video"}>
+                                <Step>
+                                    <Step.Content style={{width: "100%"}}>
+                                        <div className="videowrapper">
+                                            <iframe width={560} height={315} src={`https://www.youtube.com/embed/${event.youtube}?autoplay=1`} frameBorder={0} allowFullScreen/>
+                                        </div>
+                                    </Step.Content>
+                                </Step>
+                            </div>
                         </Step.Group>
-                    </div>}
+                    </div >}
                 </div>
         );
     }
