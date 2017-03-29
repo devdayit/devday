@@ -27,7 +27,7 @@ class Home extends Component {
                 var upcomingEvents = Object.assign([], this.state.upcomingEvents);
                 content.key = item.substring(0, item.length - 5);
                 upcomingEvents.push(content);
-                upcomingEvents = _.sortBy(upcomingEvents, 'date').reverse()
+                upcomingEvents = _.sortBy(upcomingEvents, 'date');
                 this.setState({upcomingEvents, loadingEvents: false});
             }));
         });
