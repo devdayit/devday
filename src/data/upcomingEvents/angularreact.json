@@ -1,0 +1,10 @@
+{
+  "logo": "logoNA",
+  "name": "Angular Vs. React",
+  "speaker": "Michele Aponte",
+  "description": "Realizzare applicazioni web con un front-end che abbia una user experience molto spinta richiede necessariamente l’utilizzo di un framework Javascript che sposti sul client buona parte del layer di presentation della nostra applicazione. Tra le possibili soluzioni attualmente React e Angular2 sono i più utilizzati e, anche se non è possibile confrontare una libreria con un framework completo, vedremo come approcciano la soluzione del problema per capire in quali contesti e con quali requisiti, funzionali e non, scegliere uno piuttosto che l’altro.",
+  "community": "DevDay Napoli",
+  "url": "https://www.eventbrite.com/e/10-devday-angular-vs-react-tickets-33274576153",
+  "date": "2017-04-26T18:45",
+  "location": "Re.work - Via Giovanni Porzio - Isola E2 - Napoli"
+}
