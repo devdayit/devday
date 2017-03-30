@@ -9,7 +9,7 @@ class PageHeader extends Component {
         return (
                 <div>
                     <Divider horizontal>Sponsor</Divider>
-                    <Card.Group itemsPerRow={7} className="sponsors" stackable>
+                    <Card.Group itemsPerRow={4} className="sponsors" stackable>
                         {Sponsors.map(sponsor => <Card href={sponsor.url} key={sponsor.name}>
                             <Image
                                     src={sponsor.logo}

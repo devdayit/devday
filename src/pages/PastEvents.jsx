@@ -5,13 +5,15 @@ import GitHubDataService from "../GitHubDataService";
 import _ from "underscore";
 import Moment from "react-moment";
 import PageHeader from "../components/PageHeader";
+import {extendObservable} from "mobx";
+import {observer} from "mobx-react";
 
-class PastEvents extends Component {
+const PastEvents = observer(class PastEvents extends Component {
 
     constructor(props)
     {
         super(props);
-        this.state = {pastEvents: [], loading: true};
+        extendObservable(this, {pastEvents: [], loading: true});
     }
 
     componentDidMount()
@@ -19,14 +21,13 @@ class PastEvents extends Component {
         var gitHubDataService = new GitHubDataService();
         gitHubDataService.list("pastEvents").then(list =>
         {
-            this.setState({loading: true});
+            this.loading = true;
             list.forEach(item => gitHubDataService.read("pastEvents", item).then(content =>
             {
-                var pastEvents = Object.assign([], this.state.pastEvents);
                 content.key = item.substring(0, item.length - 5);
-                pastEvents.push(content);
-                pastEvents = _.sortBy(pastEvents, 'date').reverse();
-                this.setState({pastEvents, loading: false});
+                this.pastEvents.push(content);
+                this.pastEvents = _.sortBy(this.pastEvents, 'date').reverse();
+                this.loading = false;
             }));
         });
     }
@@ -36,12 +37,12 @@ class PastEvents extends Component {
         return (
                 <div>
                     <PageHeader/>
-                    <Dimmer inverted active={this.state.loading}>
+                    <Dimmer inverted active={this.loading}>
                         <Loader inverted>Aspetta un attimo...</Loader>
                     </Dimmer>
-                    {!this.state.loading && <Divider horizontal>Eventi passati</Divider>}
+                    {!this.loading && <Divider horizontal>Eventi passati</Divider>}
                     <List size="huge">
-                        {this.state.pastEvents.map(event => <List.Item key={event.key}>
+                        {this.pastEvents.map(event => <List.Item key={event.key}>
                             {event.logo && <Image avatar src={event.logo}/>}
                             <List.Content>
                                 <List.Description>
@@ -56,6 +57,6 @@ class PastEvents extends Component {
                 </div>
         );
     }
-}
+});
 
 export default PastEvents;

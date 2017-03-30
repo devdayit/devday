@@ -4,18 +4,20 @@ import {Grid, Header, Button, Icon} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 import PageHeader from "../components/PageHeader";
 import Moment from "react-moment";
+import {extendObservable} from "mobx";
+import {observer} from "mobx-react";
 
-class PastEvent extends Component {
+const PastEvent = observer(class PastEvent extends Component {
 
     constructor(props)
     {
         super(props);
+        extendObservable(this, {event: {}});
         this.style = {
             subtitle: {
                 color: "#e0e1e1",
             }
         };
-        this.state = {};
     }
 
     componentDidMount()
@@ -23,12 +25,12 @@ class PastEvent extends Component {
         var gitHubDataService = new GitHubDataService();
         gitHubDataService
                 .read("pastEvents", this.props.match.params.eventId + ".json")
-                .then(event => this.setState({event}));
+                .then(event => (this.event = event));
     }
 
     render()
     {
-        let event = this.state.event;
+        let event = this.event;
         return event ? <div>
                     <PageHeader/>
                     <Grid verticalAlign="middle" stackable celled columns={3}>
@@ -65,6 +67,6 @@ class PastEvent extends Component {
                     </Grid>
                 </div> : <div />
     }
-}
+})
 
 export default PastEvent;

@@ -5,13 +5,18 @@ import {Link} from 'react-router-dom';
 import Moment from "react-moment";
 import delorean from '../images/delorean.png';
 import ScrollMonitor from "scrollmonitor";
+import {extendObservable} from "mobx";
+import {observer} from "mobx-react";
 
-class RandomVideo extends Component {
+const RandomVideo = observer(class RandomVideo extends Component {
 
     constructor(props)
     {
         super(props);
-        this.state = {videoVisible: false};
+        extendObservable(this, {
+            videoVisible: false,
+            video: {}
+        });
     }
 
     componentDidMount()
@@ -26,8 +31,8 @@ class RandomVideo extends Component {
         if (this.stepElement)
         {
             var elementWatcher = ScrollMonitor.create(this.stepElement);
-            elementWatcher.enterViewport(() => this.setState({videoVisible: true}));
-            elementWatcher.exitViewport(() => this.setState({videoVisible: false}));
+            elementWatcher.enterViewport(() => (this.videoVisible = true));
+            elementWatcher.exitViewport(() => (this.videoVisible = false));
         }
     }
 
@@ -45,7 +50,7 @@ class RandomVideo extends Component {
                 {
                     if (event && event.youtube)
                     {
-                        this.setState({key, event})
+                        this.video = ({key, event});
                     } else
                     {
                         setTimeout(() => this.random(list, this.randomIndex(list), gitHubDataService), 500);
@@ -55,7 +60,7 @@ class RandomVideo extends Component {
 
     render()
     {
-        var {event, key} = this.state;
+        var {event, key} = this.video;
         return (
                 <div ref={(element) => (this.stepElement = element) }>
                     {event && event.youtube && <div>
@@ -72,7 +77,7 @@ class RandomVideo extends Component {
                                     </Step.Description>
                                 </Step.Content>
                             </Step>
-                            <div className={this.state.videoVisible ? "normal-video" : "static-video"}>
+                            <div className={this.videoVisible ? "normal-video" : "static-video"}>
                                 <Step>
                                     <Step.Content style={{width: "100%"}}>
                                         <div className="videowrapper">
@@ -86,6 +91,6 @@ class RandomVideo extends Component {
                 </div>
         );
     }
-}
+});
 
 export default RandomVideo;

@@ -5,6 +5,8 @@ import Puntolingue from '../images/sponsor/puntolingue.jpg';
 import Analist from '../images/sponsor/analist.jpg';
 import Ducato from '../images/sponsor/ducato.png';
 import Newshell from '../images/sponsor/newshell.jpg'
+import Blexin from '../images/sponsor/blexin.png'
+
 var Sponsors = [
     {
         name: "Entaksi Solutions",
@@ -54,6 +56,13 @@ var Sponsors = [
         description:"Newshell - Hosting, Domini, Server Dedicati, VPS, Dedicate Server, Payment bitcoin, Bitcoin, Assistenza sistemistica",
         logo: Newshell,
         location:"Salerno"
+    },
+    {
+        name: "Blexin",
+        url: "http://http://www.blexin.com//",
+        description:"Blexin Srl è una software house campana che si occupa di sviluppo, formazione e consulenza software in ambito Web e Mobile, utilizzando sia lo stack tecnologico Microsoft che MEAN. Grazie alla propria piattaforma WebRight realizza soluzioni web business sia per aziende ed enti privati che pubbliche, mettendo a disposizione la propria esperienza sia nella definizione dei processi business, che nella realizzazione delle soluzioni software per la loro implementazione.",
+        logo: Blexin,
+        location:"Napoli"
     }
 
 

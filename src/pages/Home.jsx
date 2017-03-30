@@ -6,14 +6,20 @@ import GitHubDataService from "../GitHubDataService";
 import _ from "underscore";
 import Moment from "react-moment";
 import PageHeader from "../components/PageHeader";
+import {extendObservable} from "mobx";
+import {observer} from "mobx-react";
 
-class Home extends Component {
+
+const Home = observer(class Home extends Component {
 
     constructor(props)
     {
         super(props);
+        extendObservable(this, {
+            upcomingEvents: [],
+            loadingEvents: false
+        });
         this.style = {pastEvents: {textAlign: "right"}};
-        this.state = {upcomingEvents: [], loadingEvents: true};
     }
 
     componentDidMount()
@@ -21,25 +27,24 @@ class Home extends Component {
         var gitHubDataService = new GitHubDataService();
         gitHubDataService.list("upcomingEvents").then(list =>
         {
-            this.setState({loadingEvents: true});
+            this.loadingEvents = true;
             list.forEach(item => gitHubDataService.read("upcomingEvents", item).then(content =>
             {
-                var upcomingEvents = Object.assign([], this.state.upcomingEvents);
                 content.key = item.substring(0, item.length - 5);
-                upcomingEvents.push(content);
-                upcomingEvents = _.sortBy(upcomingEvents, 'date');
-                this.setState({upcomingEvents, loadingEvents: false});
+                this.upcomingEvents.push(content);
+                this.upcomingEvents = _.sortBy(this.upcomingEvents, 'date');
+                this.loadingEvents = false;
             }));
         });
     }
 
     render()
     {
-        const nextEvent = this.state.upcomingEvents.length > 0 && this.state.upcomingEvents[0];
+        const nextEvent = this.upcomingEvents.length > 0 && this.upcomingEvents[0];
         return (
                 <div>
                     <PageHeader>
-                        <Dimmer inverted active={this.state.loadingEvents}>
+                        <Dimmer inverted active={this.loadingEvents}>
                             <Loader inverted>Il prossimo evento sarà il...</Loader>
                         </Dimmer>
                         {nextEvent && <Step.Group fluid>
@@ -101,11 +106,11 @@ class Home extends Component {
                                     </Card.Header>
                                 </Card.Content>
                                 <Card.Content>
-                                    <Dimmer inverted active={this.state.loadingEvents}>
+                                    <Dimmer inverted active={this.loadingEvents}>
                                         <Loader inverted>Qualche secondo e sono pronto...</Loader>
                                     </Dimmer>
                                     <Feed>
-                                        {this.state.upcomingEvents.map(event => <Feed.Event
+                                        {this.upcomingEvents.map(event => <Feed.Event
                                                 href={event.url}
                                                 image={event.logo}
                                                 key={event.name}
@@ -197,6 +202,6 @@ class Home extends Component {
                 </div>
         );
     }
-}
+})
 
 export default Home;
