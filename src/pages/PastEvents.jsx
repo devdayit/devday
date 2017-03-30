@@ -5,7 +5,7 @@ import GitHubDataService from "../GitHubDataService";
 import _ from "underscore";
 import Moment from "react-moment";
 import PageHeader from "../components/PageHeader";
-import {extendObservable} from "mobx";
+import {extendObservable, autorun} from "mobx";
 import {observer} from "mobx-react";
 
 const PastEvents = observer(class PastEvents extends Component {
@@ -13,15 +13,17 @@ const PastEvents = observer(class PastEvents extends Component {
     constructor(props)
     {
         super(props);
-        extendObservable(this, {pastEvents: [], loading: true});
+        extendObservable(this, {pastEvents: [], loading: true, count: 0, total: 0});
     }
 
     componentDidMount()
     {
+        autorun(() => (this.count = this.pastEvents.length));
         var gitHubDataService = new GitHubDataService();
         gitHubDataService.list("pastEvents").then(list =>
         {
             this.loading = true;
+            this.total = list.length;
             list.forEach(item => gitHubDataService.read("pastEvents", item).then(content =>
             {
                 content.key = item.substring(0, item.length - 5);
@@ -34,13 +36,14 @@ const PastEvents = observer(class PastEvents extends Component {
 
     render()
     {
+        let countLabel = this.count !== this.total ? `(${this.count}/${this.total})` : "";
         return (
                 <div>
                     <PageHeader/>
                     <Dimmer inverted active={this.loading}>
                         <Loader inverted>Aspetta un attimo...</Loader>
                     </Dimmer>
-                    {!this.loading && <Divider horizontal>Eventi passati</Divider>}
+                    {!this.loading && <Divider horizontal>Eventi passati {countLabel}</Divider>}
                     <List size="huge">
                         {this.pastEvents.map(event => <List.Item key={event.key}>
                             {event.logo && <Image avatar src={event.logo}/>}
