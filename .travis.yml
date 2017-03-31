@@ -15,4 +15,4 @@ cache:
 before_script:
   - npm install
 script:
-  - npm  run run  build
+  - npm build
