@@ -59,7 +59,7 @@ var Sponsors = [
     },
     {
         name: "Blexin",
-        url: "http://http://www.blexin.com//",
+        url: "http://www.blexin.com//",
         description:"Blexin Srl è una software house campana che si occupa di sviluppo, formazione e consulenza software in ambito Web e Mobile, utilizzando sia lo stack tecnologico Microsoft che MEAN. Grazie alla propria piattaforma WebRight realizza soluzioni web business sia per aziende ed enti privati che pubbliche, mettendo a disposizione la propria esperienza sia nella definizione dei processi business, che nella realizzazione delle soluzioni software per la loro implementazione.",
         logo: Blexin,
         location:"Napoli"
