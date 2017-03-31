@@ -100,7 +100,7 @@ const Home = observer(class Home extends Component {
                                                 Prossimi Eventi
                                             </Grid.Column>
                                             <Grid.Column key={2} style={this.style.pastEvents}>
-                                                <Link to="/past-events">(eventi passati)</Link>
+                                                <Link to="/past-events">(Eventi Passati)</Link>
                                             </Grid.Column>
                                         </Grid>
                                     </Card.Header>
