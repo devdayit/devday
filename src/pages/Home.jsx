@@ -151,7 +151,7 @@ const Home = observer(class Home extends Component {
                                                 </Card.Header>
                                             </Card.Content>
                                         </Card>
-                                        <Card fluid href="https://slack.devday.it">
+                                        <Card fluid href="http://slack.devday.it">
                                             <Card.Content>
                                                 <Card.Header>
                                                     <Icon name="slack"/>Slack
