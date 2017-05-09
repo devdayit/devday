@@ -5,6 +5,7 @@ import PageFooter from "./components/PageFooter";
 import Home from "./pages/Home";
 import PastEvents from "./pages/PastEvents";
 import PastEvent from "./pages/PastEvent";
+import NextEvents from "./pages/NextEvents";
 import {HashRouter as Router, Route} from "react-router-dom";
 import GitHubForkRibbon from 'react-github-fork-ribbon';
 import RandomVideo from "./components/RandomVideo";
@@ -26,6 +27,7 @@ class App extends Component {
                         </GitHubForkRibbon>
                         <Container fluid>
                             <Route exact path="/" component={Home}/>
+                            <Route path="/events" component={NextEvents}/>
                             <Route path="/past-events" component={PastEvents}/>
                             <Route path="/past-event/:eventId" component={PastEvent}/>
                         </Container>

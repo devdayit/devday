@@ -1,18 +1,30 @@
 language: node_js
 node_js:
   - 7
-# safelist
 branches:
   only:
-  - master
+    - master
 git:
   depth: 3
 cache:
   directories:
-  - node_modules
-  - packages/create-react-app/node_modules
-  - packages/react-scripts/node_modules
+    - packages/create-react-app/node_modules
+    - packages/react-scripts/node_modules
 before_script:
-  - npm install
+  - git config --global user.name $GIT_EMAIL
+  - git config --global user.email $GIT_NAME
 script:
-  - npm build
+  - npm run deploy
+env:
+  global:
+    - secure: >-
+        URj6NSXosUjUXN97GilAPMv4WX9z+DCu+RHzUnvGy6PIbJq7i1wKpJcMVWOF+6BADAKTxJZuKkfrdNd38YcvTbyQVVZOrVC9PsYrekrw1fiR6VE3PTN1Be14OHnd8J+Zb3nK2OcNiepct0/pZAAhnS/iMHwT5GfgPrB43XDSltDM4JVXL2PvQ4gPd27QTpXC8jOfbi9s7T2wbSbMTZsP4oU7myK1hAFr7HC5o3DY01aV2E5/Em+5/lCjdxqeSTKf6W8fBW5B9s3+zZ/QTh7sHDBD7Q1tgRkfHxh7JqTjEufh+T0gxaealwER4Z6dDYCClBWDA9npjNYoXfJk7bjKeNbOV8fWcNG3XmbajAJ1RrERhbTSPzHDe4/3XM6H0aY1oLeGd2cKJYs+pmq22S0heG8s9lFga7BXtORg703vBhEYNnLKxZV9d3eq6VuCxm8ZUbs2MPwQ8JiTIwhz6GErFcN6sEd7q7b67bB9HXw9ya7wR11S/vzDLf1T959XcyXc0xhN4Juf2DKRtwzfhEDFgMBrysI0a8cwtlkrA3KttPZQP9sdLIMEOdQyOtumG9L0PHNLt2DmooKCttfkGrr60UJYFg/Q6K+ukzfxfXGtHE7wmwPOh4tpnAHx9kXXQMljRzGwZfy30pXJtvwj4clyIUupBfq5nSgW2W1B0eCEhpA=
+    - secure: >-
+        sctTeG7gMUQCku5Cuc4U7+pVVL+0Lay2uRydcPQmagE31WXjlm6Tutj44SqakRZdy1y5ZOjz57p+DG2yAffr/uhTL+f9UzftHyHO8rNaMIYepASJVJGJAq5maodFznyfAmQlQ8yrwb/PwaQ1MuQMFddXVdWauFU7sGboX+Q08MbjI8M8jR7XisAQPPn2qtXuVGddEovbeTQAwUyjk26yKVDcH/pKRX697G+afcgJ+Ce3CBkO2lXeDwh1xdbuuv536aXcuKFEeuGkB/AkBrE2HBcOBPRUUO9FiuQRHNj4greNU9mODS0jKFGogkSJBLwPrNIp67BUpE1CykicLSzUax1fsha8Ha19/o1VqMR9wmpo84kiZGZkuP8i5SVyk4olWAk7GS9H+AWtOqtBRXJlw2k2nI0HIUvEc5QfGPJx64knhJu3vXJrC8fK87vR0N9yv205cy2YHyNbSMqNGijnLcD10YE2kQbT2Mf0ELDYI/sivqZAGtwu7A0IeoezMjfUKDdE2AKHN/PziNUAbpXdjOQ702JzWft2bNW7/nGQHykz9l1f8WZmFyWThMb4tQFrjncHpKxq8/8Zfyn8Z0BsC/dMJHtgbxqRuMe+phh4OXdJgFgkmZAMqqNVMmjsJQsFtiGP5fbGATd/yxCtDS62c9h2zSZvJHwbCgysLLgkgwQ=
+    - secure: >-
+        eYhVQdQZAAZPNPloJA9Hzp9JWWKdmmn42GjHq2k6QmOYml1wal0jlUdO0ZySI5AQ6YueBzMTSYFu2jb5i8REKIE7e39dKNYEbVfcm8KT+Hoo97VBYXbxTuQJEvYN7/N4LeRoj0ebMGbG5Z+8rJ2nG45yzeM+IcWfRTiNOwNJAUWHTq/aBT8oeMwoMOK/E1V4lV8HBdahLIWvc/CvikEC/SSdcpQgXTjZKrDktEIgbc2eVTucfcKAu547/4q9TZMsVJBGzfVYVXmNWxeWbgqf3YeH5DIxhKdnGt1YiOffGcUgisfOA+jSy9Muzcv78Th70lmQaJ4cGqmm3t6Jn4HMvPbifGieyr5tN/FPoeUNugsizuM88UbbRar0UIowu1TMa2txr38pcvLWQNdgb2s9LzpvjIaO5cW8CyB/xiZ3fryhcxB46xtp0F0HytS5fCPOWyIUU0fAiRChz6IUEHsKXgbeJ20I6WgLjNMXlBbAjDCuoKN9FtElsRdYKnaBXi8P0clMWRsKdLskgZo1zwRq/jByipc8KcJXNPbdU8oy6feKXFaDam3eAvsg8koqSUgNiOEibdFxztDKJZ/IYVzrEDcUtbcO+NCkaMuH1yT7M73vM1DHshNLLEaGU51t6Pvz7/GasXWp3GByl2c+0/5Yttyx0QWIlWbDpD4z6drsy+w=
+notifications:
+  slack:
+    rooms:
+      - secure: >-
+          PU1Da3FBb2zFQaROM2izTFz53gllw2cl+QcuwHndA3Sxh2pYojGk3NuQ4F5K+IC0foSF9gPMh9pocMQ/ajpYCxCIjjs8M8o2yGeM3dFZK8Xa8YeKbkyjXTGWjvDgZOGNXXqyuaALZBnkZJhce9btaJhwQFj2aDSvVcZWb1PeRnUyHJY6fLuKV0vW6GDArQri7KSalHz4fXbpm/cv1jOeO/PBhl09MNQY2x3X4Jd7u+/6Q07sucJWnuvWubv0gT6WqfU5GbtlFnyiiYFYdlnxACQo+kRwMwQFYI4BJl6QX8oTDzTg/B/l/MbVEoYjPzApwS38lIBRc6qJ0lPyjTc7dmML1yiL+sSJJC8QbFeQBYJYnUzWQzlhhp0MeIFDOa9D1+gHnHRJQqN8jqpbyF25DNgWu+Tp+7/uJQw/TFqiIykC4gRg6NtxVN7sCews/ksLolpqU0ebyDbBai1qo2JSNN5niLJS/4UUPdZuSYsHXNLiiCOzpyPJsTss6Mdy3QjS6P7zSBJDkcX1bWzTPk7OTtN0jSq/BR7Vg5pmFshaFSYxRoWeF8ekQ9wG7LRNWRuMxRNQdEzXkbf+b26+BzV7E2AHzrjF8yAwA/KjQEFKwFqbWuNLkqfqWGIJ4s1xn8hq6SBeOveklGWpERDx92tLrRruRuKSE6+bYntn3LNfwA0=
