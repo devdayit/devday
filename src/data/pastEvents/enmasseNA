@@ -1,0 +1,12 @@
+{
+  "logo": "logoNA",
+  "name": "Messaging as a Service: il messaging scalabile nel cloud",
+  "speaker": "Paolo Patierno",
+  "description": "Cosa intendiamo quando parliamo di \"messaging\" ? E' utilizzabile solo \"on premise\" oppure anche nel cloud ? Nel corso di questa giornata, vedremo una breve introduzione per capire cosa si intende per \"messaging\" con i principali patterns, problemi di interoperabilità ed i componenti che ne permattano l'implemetazione in varie forme come ad esempio brokers e routers. Dopodichè, vedremo come sia possibile sviluppare una piattaforma che offra \"messaging as a service\" disponibile nel cloud che possa risolvere i problemi di configurazione e di scalabilità. Questo \"viaggio\" sarà guidato attraverso l'analisi del progetto EnMasse, una piattaforma cloud di messaging ovviamente open source che può essere eseguita su Kubernetes ed OpenShift.",
+  "community": "DevDay Napoli",
+  "url": "https://www.eventbrite.com/e/11-devday-messaging-as-a-service-il-messaging-scalabile-nel-cloud-tickets-34470945526",
+  "date": "2017-05-22T18:45",
+  "location": "Re.work - Via Giovanni Porzio - Isola E2 - Napoli"
+  "youtube":"19Nw5hc8P7o",
+  "slideshare":"p8Q4RvRv8IWzQD"
+}
