@@ -6,6 +6,8 @@ import Analist from '../images/sponsor/analist.jpg';
 import Ducato from '../images/sponsor/ducato.png';
 import Newshell from '../images/sponsor/newshell.jpg'
 import Blexin from '../images/sponsor/blexin.png'
+import WishOp from '../images/sponsor/logo_wish-op_full.png'
+import Beta80 from '../images/sponsor/logo_beta80.jpg'
 
 var Sponsors = [
     {
@@ -63,6 +65,20 @@ var Sponsors = [
         description:"Blexin Srl è una software house campana che si occupa di sviluppo, formazione e consulenza software in ambito Web e Mobile, utilizzando sia lo stack tecnologico Microsoft che MEAN. Grazie alla propria piattaforma WebRight realizza soluzioni web business sia per aziende ed enti privati che pubbliche, mettendo a disposizione la propria esperienza sia nella definizione dei processi business, che nella realizzazione delle soluzioni software per la loro implementazione.",
         logo: Blexin,
         location:"Napoli"
+    },
+    {
+        name: "Wish-Op",
+        url: "http://www.wish-op.com/",
+        description:"Sistema integrato di sviluppo software, formazione, coworking e vendita. Wish-OP un’unica soluzione a tanti problemi!",
+        logo: WishOp,
+        location:"Benevento"
+    },
+    {
+        name: "Beta 80 Group",
+        url: "http://www.beta80group.it",
+        description:"Beta 80 Group is between people and technology, Beta 80 Group is where you are, Beta 80 Group helps you manage the digital transformation.",
+        logo: Beta80,
+        location:"Benevento"
     }
 
 
