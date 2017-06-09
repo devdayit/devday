@@ -7,7 +7,7 @@ import Ducato from '../images/sponsor/ducato.png';
 import Newshell from '../images/sponsor/newshell.jpg'
 import Blexin from '../images/sponsor/blexin.png'
 import WishOp from '../images/sponsor/logo_wish-op_full.png'
-import Beta80 from '../images/sponsor/logo_beta80.jpg'
+import Beta80 from '../images/sponsor/logo_beta80.jpeg'
 
 var Sponsors = [
     {
