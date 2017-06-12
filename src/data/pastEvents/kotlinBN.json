@@ -1,0 +1,11 @@
+{
+  "logo": "logoBN",
+  "name": "Kotlin: foss' a vota bona / could be the right time",
+  "speaker": "Davide Cerbo",
+  "community": "DevDay Benevento",
+  "url": "https://www.meetup.com/it-IT/DevDay-Benevento/events/240292370/",
+  "date": "2017-06-10T15:30",
+  "location": "Istituto Magistrale Guacci, Benevento"
+  "description": "Dopo 20 anni Java inizia a sentire il peso degli anni e la sua sintassi non sempre evolve come vorremmo, ma la JVM resta sempre un ambiente affidabile ed è già in produzione presso moltissime aziende. Negli ultimi anni sono usciti molti linguaggi basati sulla JVM, ma non tutti hanno avuto il successo sperato. Kotlin ha già conquistato Android e ora potrebbe anche essere molto presente nelle nostre web application: una sintassi intuitiva e grandi aziende che lo supportano potrebbero dare la spinta definitiva verso il successo. Durante il talk vedremo le basi del linguaggio, perché è figo e svilupperemo una piccola applicazione con Spring Boot."	
+  "slides":"eTBNwUXGwFCI34"
+}
