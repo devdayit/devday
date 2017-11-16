@@ -1,0 +1,9 @@
+{
+  "logo": "logoNA",
+  "name": "Scala: dalla Svizzera con furore",
+  "speaker": "Rosario Renga",
+  "url": "https://www.eventbrite.com/e/13-devday-scala-dalla-svizzera-con-furore-tickets-39512636359",
+  "date": "2017-11-27T18:45",
+  "location": "re.work - Centro Direzionale, Isola E2",
+  "description": "Basato sulla JVM Scala mette insieme OOP e Functional Programming per creare un linguaggio completo, conciso, funzionale, type safe ed estremamente versatile per qualsiasi tipo di applicazione. In questa presentazione cercheremo di addentrarci in questo linguaggio partendo da alcune delle caratteristiche sintattiche di base passando per esempi di programmazione funzionale fino ad arrivare ad esempi apparentemente incomprensibili di codice reale."
+}
