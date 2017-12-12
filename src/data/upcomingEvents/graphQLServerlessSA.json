@@ -1,9 +1,0 @@
-{
-  "logo": "logoSA",
-  "name": "Serverless & GraphQL",
-  "speaker": "Gianluca Esposito",
-  "url": "https://www.meetup.com/it-IT/devday-salerno/events/245071353/",
-  "date": "2017-12-02T16:00",
-  "location": "Healthware International - via Cappello Vecchio, 15 , Salerno, SA",
-  "description": "_Above the cloud: Serverless_: Nel talk parleremo di AWS Lambda, capostipite delle implementazioni \"senza server\", gestite e deployate tramite il framework *Serverless*, e analizzeremo rischi e benefici di questo approccio. _You give REST a bad name_ cosa accade quando in REST dobbiamo rappresentare relazioni? E come ci si districa in caso di paginazione o ricerca? Una soluzione c’è, con GraphQL. Basta smettere di “pensare a come le risorse possano essere rappresentate univocamente tramite protocollo HTTP”. Semplice no?"
-}
