@@ -6,5 +6,5 @@
   "url": "https://www.meetup.com/it-IT/DevDay-Benevento/events/245311910/",
   "date": "2017-12-16T15:00",
   "location": "Istituto Tecnico Industriale - Bosco Lucarelli - BN, Viale San Lorenzo",
-  "description": "Andremo alla scoperta di Git (https://git-scm.com/), un source control che si adatta alle esigenze degli sviluppatori, ottimizeremo il codice passando per l'approccio del Continuous Integration ed in fine useremo Docker (https://www.docker.com/) per deploy rapidi e scalabili."
+  "description": "Andremo alla scoperta di Git, un source control che si adatta alle esigenze degli sviluppatori, ottimizeremo il codice passando per l'approccio del Continuous Integration ed in fine useremo Docker per deploy rapidi e scalabili."
 }
