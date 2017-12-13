@@ -1,0 +1,9 @@
+{
+"logo": "logoNA",
+"name": "Modular web applications",
+"speaker": "Marcello Montemagno",
+"url": "https://www.eventbrite.com/e/14-devday-modular-web-applications-tickets-40858313315",
+"date": "2017-12-19T18:45",
+"location": "re.work - Centro Direzionale Napoli - Isola E2",
+"description": "Un tempo i file .js nelle nostre applicazioni web erano pochi KB che servivano a rendere meno noiose le nostre applicazioni, oggi in Javascript si scrivono intere e complesse applicazioni web su cui lavorano diverse decine di sviluppatori in contemporanea. In alcuni casi sviluppare una singola applicazione monolitica non è più possibile e si è costretti a suddividere il progetto in moduli. Durante il talk verranno illustrate alcune tecniche per rendere la nostra applicazione web modulare mostrandone i vantaggi ed affrontando i problemi che ne seguono. Il talk esaminerà la tematica in modo generale ma fornirà una applicazione basata su NPM, Webpack e React come esempio."
+}
