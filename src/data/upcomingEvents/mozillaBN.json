@@ -1,0 +1,10 @@
+
+{
+  "logo": "logoBN",
+  "name": "Join Mozilla we have pasta and Get Ready to Browser Superpowers",
+  "speaker": "Daniele Scasciafratte",
+  "url": "https://www.meetup.com/it-IT/DevDay-Benevento/events/246091791/",
+  "date": "2017-12-16T15:00",
+  "location": "Università degli Studi del Sannio - Palazzo Bosco - BN, Corso Garibaldi",
+  "description": "Non tutti sanno cosa significa essere un volontario di un progetto Open Source né come funzioni Mozilla. Vediamo di scoprirlo insieme al nuovo Firefox 57 e Firefox Quantum! I browser moderni hanno la peculiarità di essere estendibili con del JavaScript oltre di comunicare con un processo. La nuova WebExtensions API ha rivoluzionato Firefox rendendo compatibili le estensioni tra browser come Chrome e Opera e di rendere il tutto multi processo."
+}
