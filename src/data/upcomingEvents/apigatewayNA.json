@@ -1,0 +1,9 @@
+{
+"logo": "logoNA",
+"name": "Building Resilient Microservice APIs with REST and API Gateway",
+"speaker": "Daniele Scasciafratte",
+"url": "https://www.eventbrite.com/e/15-devday-napoli-building-resilient-microservice-apis-with-rest-and-api-gateway-tickets-4179734699/",
+"date": "2018-01-19T18:45",
+"location": "re.work - CDN Isola E2 - Viale della Costituzione - 80143 Napoli",
+"description": "Migrare ad un sistema basato sui microservizi da una applicazione monolitica è una attività non semplice che molto spesso si conclude con un sistema completamente differente in termini di architettura, componenti e soprattutto interfaccia API esposta; il che può anche significare minare l’integrazione con i client esistenti. C’è un modo migliore? In questa presentazione partiremo da una semplice applicazione monolitica e la rifattorializzeremo in un insieme di microservizi discutendo ed eventualmente risolvendo tutti i problemi che emergeranno man mano, scoprendo come il pardigma REST e un API Gateway siano degli strumenti di lavoro fondamentali per l'obiettivo. Alla fine della presentazione mostreremo come passare il nuovo sistema possa essere cambiato nella sua versione monolitica a quella a microservizi, a nostra scelta, senza rompere alcuna integrazione con i clients esistenti."
+}
