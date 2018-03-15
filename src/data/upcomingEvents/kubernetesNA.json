@@ -1,0 +1,9 @@
+{
+  "logo": "logoNA",
+  "name": "Orchestrazione dei containers con Kubernetes ed OpenShift",
+  "speaker": "Paolo Patierno",
+  "url": "https://www.eventbrite.com/e/17-devday-napoli-orchestrazione-dei-containers-con-kubernetes-ed-openshift-tickets-44116308065",
+  "date": "2018-03-28T18:45",
+  "location": "Re.work - Isola E2, Centro direzionale di Napoli",
+  "description": "Prima nacquero i containers, poi arrivò Docker che rese semplicissimo il loro utilizzo agli sviluppatori ma qualcosa ancora mancava : comporre e connettere containers non era abbastanza per realizzare applicazioni più complesse, la nuova 'era' dei microservizi aveva bisogno di un modo per poter gestire il ciclo di vita dei container, il bilanciamento del traffico e molto altro. La risposta? Google rese pubblicamente disponibile 'Borg' come progetto open source: nacque Kubernetes! Nel corso di questa sessione vedremo una introduzione su Kubernetes, la sua architettura ed i principali elementi che la rendono la piattaforma di orchestrazione dei containers maggiormente utilizzata. Inoltre, verrà introdotto anche la piattaforma Openshift, basata su Kubernetes, ma che aggiunge ad essa ulteriori funzionalità rendendola di livello enterprise."
+}
