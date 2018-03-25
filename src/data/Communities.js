@@ -43,7 +43,8 @@ var Communities = [
         color: "blue",
         logo: logoCE,
         description: "Visita la pagina della comunità casertana!",
-        facebook: "https://www.facebook.com/groups/290923128043281/"
+        facebook: "https://www.facebook.com/groups/290923128043281/",
+        meetup: "https://www.meetup.com/devday-caserta"
     },
     {
         name: "Make a game - Campania",
