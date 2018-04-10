@@ -2,6 +2,7 @@ import logoNA from '../images/NA-DEV-DAY_logo.png';
 import logoSA from '../images/SA-DEV-DAY_logo.png';
 import logoBN from '../images/BN-DEV-DAY_logo.png';
 import logoAV from '../images/AV-DEV-DAY_logo.png';
+import logoCE from '../images/CE-DEV-DAY_logo.png';
 
 var Events = [
     {
