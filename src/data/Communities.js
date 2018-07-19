@@ -45,14 +45,6 @@ var Communities = [
         description: "Visita la pagina della comunità casertana!",
         facebook: "https://www.facebook.com/groups/290923128043281/",
         meetup: "https://www.meetup.com/devday-caserta"
-    },
-    {
-        name: "Make a game - Campania",
-        color: "grey",
-        logo: logoMAG,
-        description: "Visita la pagina della comunità di sviluppo videogame in Campania!",
-        facebook: "https://www.facebook.com/groups/1105695212878350/",
-        meetup: "https://www.meetup.com/it-IT/MakeGameCampania/"
     }
 ];
 

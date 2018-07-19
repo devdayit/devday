@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import { Grid, Card, Dimmer, Loader, Feed } from "semantic-ui-react";
+import React from "react";
+import {Link} from "react-router-dom";
+import {Card, Dimmer, Feed, Grid, Icon, Loader} from "semantic-ui-react";
 import Moment from "react-moment";
 
 class Events extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
-    this.style = { 'pastEvents': { 'textAlign': 'right' } };
+    this.style = {'pastEvents': {'textAlign': 'right'}};
   }
 
-  render() {
+  render () {
     return (
       <Card fluid>
         <Card.Content>
@@ -17,9 +17,6 @@ class Events extends React.Component {
             <Grid columns={2}>
               <Grid.Column key={1}>
                 Prossimi Eventi
-              </Grid.Column>
-              <Grid.Column key={2} style={this.style.pastEvents}>
-                <Link to="/past-events">(Eventi Passati)</Link>
               </Grid.Column>
             </Grid>
           </Card.Header>
@@ -33,8 +30,8 @@ class Events extends React.Component {
               event => (
                 <Feed.Event
                   href={event.url}
-                  image={event.logo}
-                  key={event.name}
+                  image={event.friend ? <Icon name="handshake outline"/> : event.logo}
+                  key={event.id || event.name}
                   date={<Moment locale="IT" format=" Do MMMM YYYY @ HH:mm">{event.date}</Moment>}
                   summary={event.name}
                   extraText={event.location}
@@ -42,6 +39,7 @@ class Events extends React.Component {
               )
             )}
           </Feed>
+          <span className="meta">Gli eventi contrassegnate dall'icona <Icon name="handshake outline"/> sono organizzate da community amiche.</span>
         </Card.Content>
       </Card>
     );

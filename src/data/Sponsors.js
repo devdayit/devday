@@ -8,6 +8,8 @@ import Newshell from '../images/sponsor/newshell.jpg'
 import Blexin from '../images/sponsor/blexin.png'
 import WishOp from '../images/sponsor/logo_wish-op_full.png'
 import Beta80 from '../images/sponsor/logo_beta80.jpeg'
+import EMM from '../images/sponsor/emm.png'
+import RELATECH from '../images/sponsor/relatech.jpg'
 
 var Sponsors = [
     {
@@ -79,7 +81,21 @@ var Sponsors = [
         description:"Beta 80 Group is between people and technology, Beta 80 Group is where you are, Beta 80 Group helps you manage the digital transformation.",
         logo: Beta80,
         location:"Benevento"
-    }
+    },
+  {
+    name: "Relatech",
+    url: "http://www.relatech.com/web/",
+    description:"In Relatech da oltre quindici anni forniamo soluzioni software efficaci e su misura per i nostri Clienti e forniamo qualificati professionisti in grado di farlo per loro. La nostra offerta è ampia sia dal punto di vista della tecnologia che dei servizi , grazie alla professionalità della nostra struttura interna e a quella dei nostri partner qualificati, che condividono i nostri valori e la nostra passione per il mondo ICT.",
+    logo: RELATECH,
+    location:"Napoli"
+  },
+  {
+    name: "EMM Informatica",
+    url: "http://www.emminformatica.it",
+    description:"EMM Informatica è un’azienda in forte espansione che opera nel campo dell’erogazione dei servizi e dello sviluppo di progetti software. Nasce con il preciso scopo di dare soluzioni avanzate alle problematiche legate all’Information Technology.",
+    logo: EMM,
+    location:"Napoli"
+  }
 
 
 ];
