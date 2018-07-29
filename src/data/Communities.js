@@ -3,7 +3,7 @@ import logoSA from '../images/SA-DEV-DAY_logo.png';
 import logoBN from '../images/BN-DEV-DAY_logo.png';
 import logoAV from '../images/AV-DEV-DAY_logo.png';
 import logoCE from '../images/CE-DEV-DAY_logo.png';
-import logoMAG from '../images/MAKEAGAME.png';
+//import logoMAG from '../images/MAKEAGAME.png';
 
 var Communities = [
     {

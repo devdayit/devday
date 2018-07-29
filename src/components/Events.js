@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import {Card, Dimmer, Feed, Grid, Icon, Loader} from "semantic-ui-react";
 import Moment from "react-moment";
 
@@ -38,7 +37,7 @@ class Events extends React.Component {
                 />
               )
             )}
-            {this.props.events.length == 0 && <div>Non ci sono eventi in programma, ma ci stiamo lavorando ;)</div>}
+            {this.props.events.length === 0 && <div>Non ci sono eventi in programma, ma ci stiamo lavorando ;)</div>}
           </Feed>
           <span className="meta">Gli eventi contrassegnate dall'icona <Icon name="handshake outline"/> sono organizzate da community amiche.</span>
         </Card.Content>

@@ -48,7 +48,7 @@ export default class MeetupDataService {
           jsonp(item.url, null, (error, apiResult) => {
             if (apiResult.results.length > 0) {
               let itemResult = apiResult.results.map(data => {
-                let isFriend = item.logo == undefined;
+                let isFriend = item.logo === undefined;
                 return {
                   friend: isFriend,
                   id: data.id,
