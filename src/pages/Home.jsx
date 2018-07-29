@@ -23,18 +23,21 @@ const Home = observer(class Home extends Component {
     var eventsDataService = new MeetupDataService();
     eventsDataService.list("upcomingEvents").then(list => {
       this.loadingEvents = true;
-      list.forEach(item => eventsDataService.read("upcomingEvents", item).then(content => {
-        content.key = item.id;
-        this.upcomingEvents.push(content);
-        this.upcomingEvents = _.sortBy(this.upcomingEvents, 'date');
+      if (list.length > 0) {
         this.loadingEvents = false;
-      }));
+      } else {
+        list.forEach(item => eventsDataService.read("upcomingEvents", item).then(content => {
+          content.key = item.id;
+          this.upcomingEvents.push(content);
+          this.upcomingEvents = _.sortBy(this.upcomingEvents, 'date');
+          this.loadingEvents = false;
+        }));
+      }
     });
   }
 
   render () {
     const nextEvent = this.upcomingEvents.length > 0 && this.upcomingEvents[0];
-    console.log("nextEvent.date", nextEvent.date);
     return (
       <div>
         <PageHeader>
