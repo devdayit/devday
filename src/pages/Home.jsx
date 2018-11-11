@@ -23,7 +23,7 @@ const Home = observer(class Home extends Component {
     var eventsDataService = new MeetupDataService();
     eventsDataService.list("upcomingEvents").then(list => {
       this.loadingEvents = true;
-      if (list.length > 0) {
+      if (list.length == 0) {
         this.loadingEvents = false;
       } else {
         list.forEach(item => eventsDataService.read("upcomingEvents", item).then(content => {
