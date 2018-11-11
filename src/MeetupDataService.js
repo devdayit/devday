@@ -16,22 +16,22 @@ export default class MeetupDataService {
     },
     {
       name: "DevDay Salerno",
-      logo: logoNAImage,
+      logo: logoSAImage,
       url: "https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=devday-salerno&page=200&fields=&order=time&desc=false&status=upcoming&sig_id=188208760&sig=977abe081e983fe0dcb7949f0a65c243eaa73fbf"
     },
     {
       name: "DevDay Benevento",
-      logo: logoNAImage,
+      logo: logoBNImage,
       url: "https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=devday-benevento&page=200&fields=&order=time&desc=false&status=upcoming&sig_id=188208760&sig=494877cff2eb7b144f5fb1bc311f7b6d78379ffe"
     },
     {
       name: "DevDay Avellino",
-      logo: logoNAImage,
+      logo: logoAVImage,
       url: "https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=devday-avellino&page=200&fields=&order=time&desc=false&status=upcoming&sig_id=188208760&sig=eccce9b52999e0acc37681847e9f20434f65aaf0"
     },
     {
       name: "DevDay Caserta",
-      logo: logoNAImage,
+      logo: logoCEImage,
       url: "https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=devday-caserta&page=200&fields=&order=time&desc=false&status=upcoming&sig_id=188208760&sig=ea406dab95baa6c088925931cd4c26646adfae8b"
     },
   ]
