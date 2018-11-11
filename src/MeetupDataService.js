@@ -1,4 +1,9 @@
-import logoNAImage from "./images/NA-DEV-DAY_logo.png";
+import logoNAImage from './images/NA-DEV-DAY_logo.png';
+import logoSAImage from './images/SA-DEV-DAY_logo.png';
+import logoBNImage from './images/BN-DEV-DAY_logo.png';
+import logoAVImage from './images/AV-DEV-DAY_logo.png';
+import logoCEImage from './images/CE-DEV-DAY_logo.png';
+
 import jsonp from "jsonp";
 
 export default class MeetupDataService {
