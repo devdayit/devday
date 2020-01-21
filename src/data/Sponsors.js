@@ -48,11 +48,11 @@ var Sponsors = [
         location:"Avellino"
     },
     {
-        name: "Ducato di Chianche",
-        url: "http://www.ducatodichianche.com/",
-        description:"Ducato di Chianche - Wine EXPERIENCE",
-        logo: Ducato,
-        location:"Avellino"
+        name: "Magma",
+        url: "http://www.magma.it/",
+        description:"Magma è una realtà ICT napoletana, che si propone come partner tecnologico per progettazione e sviluppo di sistemi informativi, formazione del personale e digital strategy.",
+        logo: Magma,
+        location:"Napoli"
     },
     {
         name: "Newshell",
