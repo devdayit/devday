@@ -3,7 +3,7 @@ import XTeam from '../images/sponsor/xteam.png';
 import Healthware from '../images/sponsor/healthware.jpeg';
 import Puntolingue from '../images/sponsor/puntolingue.jpg';
 import Analist from '../images/sponsor/analist.jpg';
-import Ducato from '../images/sponsor/ducato.png';
+import Magma from '../images/sponsor/magma.png';
 import Newshell from '../images/sponsor/newshell.jpg'
 import Blexin from '../images/sponsor/blexin.png'
 import WishOp from '../images/sponsor/logo_wish-op_full.png'
