@@ -1,0 +1,9 @@
+{
+	"logo": "logoBN",
+	"name": "Blazor: sviluppare SPA con .NET e WebAssembly",
+	"speaker": "Michele Aponte",
+	"url": "https://www.meetup.com/it-IT/DevDay-Benevento/events/268261500",
+	"date": "2020-02-02T14:30",
+	"location": "Istituto Tecnico Industriale - Bosco Lucarelli - BN, Viale San Lorenzo ",
+	"description": "Se sei uno sviluppatore .NET e JavaScript è il tuo incubo, Blazor è la soluzione per te. In questa sessione vedremo come sia semplice realizzare un Single Page Application enterprise con Blazor e WebAssembly, e come implementare gli scenari tipici di questa tipologia di applicazioni."
+}
