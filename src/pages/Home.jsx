@@ -114,7 +114,7 @@ const Home = observer(class Home extends Component {
                       </Card.Header>
                     </Card.Content>
                   </Card>
-                  <Card fluid href="https://www.youtube.com/channel/UCUmykbn_rG5dExSncCgW9Nw">
+                  <Card fluid href="https://www.youtube.com/c/DevDay">
                     <Card.Content>
                       <Card.Header>
                         <Icon name="youtube"/>YouTube
