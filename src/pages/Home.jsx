@@ -15,43 +15,43 @@ import Communities from "../data/Communities";
 import _ from "underscore";
 import Moment from "react-moment";
 import PageHeader from "../components/PageHeader";
-import { extendObservable } from "mobx";
+import { extendObservable, toJS } from "mobx";
 import { observer } from "mobx-react";
 import Events from "../components/Events";
-import MeetupDataService from "../MeetupDataService";
 
 const Home = observer(
   class Home extends Component {
     constructor(props) {
       super(props);
+
       extendObservable(this, {
         upcomingEvents: [],
         loadingEvents: false
       });
     }
 
-    componentDidMount() {
-      var eventsDataService = new MeetupDataService();
-      eventsDataService.list("upcomingEvents").then(list => {
-        this.loadingEvents = true;
-        if (list.length === 0) {
+    async componentDidMount() {
+      this.loadingEvents = true;
+      try {
+        const events = await fetch(
+          "https://meetupapi.netlify.com/.netlify/functions/proxy"
+        ).then(res => res.json());
+
+        if (events.length !== 0) {
+          this.upcomingEvents.push(...events);
+          this.upcomingEvents = _.sortBy(this.upcomingEvents, "time");
           this.loadingEvents = false;
-        } else {
-          list.forEach(item =>
-            eventsDataService.read("upcomingEvents", item).then(content => {
-              content.key = item.id;
-              this.upcomingEvents.push(content);
-              this.upcomingEvents = _.sortBy(this.upcomingEvents, "date");
-              this.loadingEvents = false;
-            })
-          );
         }
-      });
+      } catch (error) {
+        console.log(error);
+      }
+      this.loadingEvents = false;
     }
 
     render() {
       const nextEvent =
         this.upcomingEvents.length > 0 && this.upcomingEvents[0];
+
       return (
         <div>
           <PageHeader>
@@ -66,7 +66,7 @@ const Home = observer(
                     <Step.Title>Prossimo evento</Step.Title>
                     <Step.Description>
                       <Moment fromNow locale="IT">
-                        {nextEvent.date}
+                        {nextEvent.time}
                       </Moment>
                     </Step.Description>
                   </Step.Content>
