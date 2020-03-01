@@ -2,7 +2,7 @@
   "name": "devday",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.devday.it",
+  "homepage": "https://www.devday.it",
   "dependencies": {
     "api-github": "^1.1.0",
     "fetch": "^1.1.0",
