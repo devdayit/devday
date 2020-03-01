@@ -15,7 +15,7 @@ import Communities from "../data/Communities";
 import _ from "underscore";
 import Moment from "react-moment";
 import PageHeader from "../components/PageHeader";
-import { extendObservable, toJS } from "mobx";
+import { extendObservable } from "mobx";
 import { observer } from "mobx-react";
 import Events from "../components/Events";
 
@@ -168,7 +168,7 @@ const Home = observer(
                         </Card.Header>
                       </Card.Content>
                     </Card>
-                    <Card fluid href="http://slack.devday.it">
+                    <Card fluid href="https://slack.devday.it">
                       <Card.Content>
                         <Card.Header>
                           <Icon name="slack" />
