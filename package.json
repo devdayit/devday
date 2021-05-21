@@ -19,7 +19,7 @@
     "react-router-dom": "^4.0.0",
     "scrollmonitor": "^1.2.3",
     "semantic-ui-react": "^0.67.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0",
