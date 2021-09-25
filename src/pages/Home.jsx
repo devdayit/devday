@@ -40,7 +40,6 @@ const Home = observer(
         if (events.length !== 0) {
           this.upcomingEvents.push(...events);
           this.upcomingEvents = _.sortBy(this.upcomingEvents, "time");
-          this.loadingEvents = false;
         }
       } catch (error) {
         console.log(error);
