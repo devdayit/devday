@@ -9,7 +9,7 @@ import {
   Image,
   Loader,
   Reveal,
-  Step
+  Step,
 } from "semantic-ui-react";
 import Communities from "../data/Communities";
 import _ from "underscore";
@@ -26,7 +26,7 @@ const Home = observer(
 
       extendObservable(this, {
         upcomingEvents: [],
-        loadingEvents: false
+        loadingEvents: false,
       });
     }
 
@@ -34,8 +34,8 @@ const Home = observer(
       this.loadingEvents = true;
       try {
         const events = await fetch(
-          "https://meetupapi.netlify.com/.netlify/functions/proxy"
-        ).then(res => res.json());
+          "https://meetupapi.devday.it/.netlify/functions/proxy"
+        ).then((res) => res.json());
 
         if (events.length !== 0) {
           this.upcomingEvents.push(...events);
@@ -86,7 +86,7 @@ const Home = observer(
             className="communities"
             stackable
           >
-            {Communities.map(community => (
+            {Communities.map((community) => (
               <Card color={community.color} key={community.name}>
                 <Card.Content>
                   <Reveal animated="move">
